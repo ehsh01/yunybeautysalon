@@ -20,7 +20,7 @@ export default function Book() {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 tracking-widest text-primary whitespace-nowrap"
+          className="text-3xl md:text-5xl lg:text-6xl font-light mb-12 tracking-widest text-primary whitespace-nowrap"
         >
           {t.bookTitle}
         </motion.h2>
