@@ -139,7 +139,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex flex-col gap-4">
               <div>
                 <h4 className="text-2xl font-bold tracking-widest mb-2 text-primary">YUNY</h4>
-                <p className="text-muted-foreground font-light text-sm uppercase tracking-wider">Beauty Salon</p>
+                <p className="text-primary font-light text-sm uppercase tracking-wider">Beauty Salon</p>
               </div>
               <div className="flex gap-4 justify-center md:justify-start">
                 {/* Social placeholders */}
@@ -154,13 +154,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             
-            <div className="flex flex-col gap-2 text-sm font-light text-muted-foreground">
+            <div className="flex flex-col gap-2 text-sm font-medium text-primary">
               <p>{t.footerAddress}</p>
               <p>{t.footerHours}</p>
             </div>
           </div>
           
-          <div className="mt-12 pt-8 border-t border-gray-100 text-center text-xs text-muted-foreground uppercase tracking-widest">
+          <div className="mt-12 pt-8 border-t border-gray-100 text-center text-xs text-primary uppercase tracking-widest font-medium">
             {t.footerCopyright}
           </div>
         </div>
