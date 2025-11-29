@@ -48,11 +48,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
             <div 
-              className={`text-2xl font-light tracking-widest uppercase cursor-pointer ${
-                isHome ? "text-white drop-shadow-md" : "text-primary"
-              }`}
+              className="text-2xl font-light tracking-widest uppercase cursor-pointer"
             >
-              YUNY
+              {/* Logo removed */}
             </div>
           </Link>
 
