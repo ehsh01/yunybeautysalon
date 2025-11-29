@@ -42,7 +42,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   
   const headerBgClass = "absolute bg-transparent py-6";
     
-  const textColorClass = isTransparentPage ? "text-white drop-shadow-md" : "text-primary";
+  const textColorClass = isTransparentPage ? "text-white drop-shadow-md" : "text-black";
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -52,7 +52,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link href="/">
             <div 
               className={`text-2xl font-light tracking-widest uppercase cursor-pointer ${
-                isTransparentPage ? "text-white drop-shadow-md" : "text-primary"
+                isTransparentPage ? "text-white drop-shadow-md" : "text-black"
               }`}
             >
               {/* Logo removed */}
@@ -65,7 +65,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link key={item.href} href={item.href}>
                 <a 
                   className={`text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors ${
-                    isTransparentPage ? "text-white drop-shadow-sm" : "text-primary"
+                    isTransparentPage ? "text-white drop-shadow-sm" : "text-black font-bold"
                   } ${location === item.href ? "text-accent underline underline-offset-4" : ""}`}
                 >
                   {item.label}
@@ -78,7 +78,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               className={`flex items-center gap-1 text-sm font-medium uppercase border px-3 py-1 rounded-full transition-colors ${
                 isTransparentPage 
                   ? "text-white border-white/50 hover:bg-white/10" 
-                  : "text-primary border-primary/20 hover:border-accent hover:text-accent"
+                  : "text-black border-black/20 hover:border-accent hover:text-accent font-bold"
               }`}
             >
               <Globe className="w-3 h-3" />
