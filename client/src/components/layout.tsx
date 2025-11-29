@@ -31,8 +31,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navItems = [
     { href: "/", label: t.navHome },
     { href: "/about", label: t.navAbout },
-    { href: "/services", label: t.navServices },
     { href: "/book", label: t.navBook },
+    { href: "/services", label: t.navServices },
   ];
 
   // Determine if we are on the home page for specific styling (transparent header)
