@@ -25,6 +25,17 @@ export default function Book() {
           {t.bookTitle}
         </motion.h2>
         
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mb-8"
+        >
+          <p className="text-lg md:text-xl text-primary font-medium tracking-wide">
+            {(t as any).callAction || "Call 786-436-8830"}
+          </p>
+        </motion.div>
+
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}

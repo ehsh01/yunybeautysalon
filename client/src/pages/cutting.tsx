@@ -74,9 +74,6 @@ export default function Cutting() {
           transition={{ delay: 0.6 }}
           className="mt-8"
         >
-            <p className="text-lg md:text-xl text-primary font-medium tracking-wide mb-4">
-              {translations.callAction || "Call 786-436-8830"}
-            </p>
              <button
             onClick={() => window.location.href = "/book"}
             className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
