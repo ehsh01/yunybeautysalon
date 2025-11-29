@@ -16,8 +16,8 @@ export const translations = {
     bookTitle: "Book Your Appointment",
     bookText: "Reserve your visit quickly and securely through our online booking system.",
     bookButtonMain: "Book Online",
-    footerAddress: "1428 Brickell Ave, Miami, FL 33131",
-    footerHours: "Open Tuesday to Sunday | 9AM - 7PM",
+    footerAddress: "5048 Old Jonesboro Rd, Bristol, TN 37620",
+    footerHours: "Open Friday and Saturday | 9AM - 6PM",
     footerCopyright: "© 2025 YUNY BEAUTY SALON. All rights reserved."
   },
   es: {
@@ -37,8 +37,8 @@ export const translations = {
     bookTitle: "Reserva tu cita",
     bookText: "Reserva tu visita rápida y de forma segura a través de nuestro sistema de reservas en línea.",
     bookButtonMain: "Reservar en línea",
-    footerAddress: "1428 Brickell Ave, Miami, FL 33131",
-    footerHours: "Abierto de martes a domingo | 9AM - 7PM",
+    footerAddress: "5048 Old Jonesboro Rd, Bristol, TN 37620",
+    footerHours: "Abierto viernes y sábado | 9AM - 6PM",
     footerCopyright: "© 2025 YUNY BEAUTY SALON. Todos los derechos reservados."
   }
 };
