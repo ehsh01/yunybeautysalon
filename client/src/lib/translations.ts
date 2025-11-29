@@ -20,7 +20,7 @@ export const translations = {
     servicesMakeupDesc: "Full face applications for events and weddings.",
     bookTitle: "Book Your Appointment",
     bookText: "Reserve your visit quickly and securely through our online booking system.",
-    bookButtonMain: "Book with Square",
+    bookButtonMain: "Book Online",
     footerAddress: "1428 Brickell Ave, Miami, FL 33131",
     footerHours: "Open Tuesday to Sunday | 9AM - 7PM",
     footerCopyright: "© 2025 YUNY BEAUTY SALON. All rights reserved."
@@ -46,7 +46,7 @@ export const translations = {
     servicesMakeupDesc: "Aplicaciones completas para eventos y bodas.",
     bookTitle: "Reserva tu cita",
     bookText: "Reserva tu visita rápida y de forma segura a través de nuestro sistema de reservas en línea.",
-    bookButtonMain: "Reservar con Square",
+    bookButtonMain: "Reservar en línea",
     footerAddress: "1428 Brickell Ave, Miami, FL 33131",
     footerHours: "Abierto de martes a domingo | 9AM - 7PM",
     footerCopyright: "© 2025 YUNY BEAUTY SALON. Todos los derechos reservados."
