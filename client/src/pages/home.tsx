@@ -4,7 +4,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Assets
-import heroImage from "@assets/image_1764436423928.png";
+import heroImage from "@assets/Redheadmodel-main_1764440271238.png";
 import aboutImage from "@assets/image_1764436473880.png";
 
 export default function Home() {
