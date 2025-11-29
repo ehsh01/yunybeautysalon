@@ -9,6 +9,9 @@ import Layout from "@/components/layout";
 import Home from "@/pages/home";
 import About from "@/pages/about";
 import Services from "@/pages/services";
+import Cutting from "@/pages/cutting";
+import Color from "@/pages/color";
+import Treatments from "@/pages/treatments";
 import Book from "@/pages/book";
 import NotFound from "@/pages/not-found";
 
@@ -19,6 +22,9 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
+        <Route path="/services/cutting" component={Cutting} />
+        <Route path="/services/color" component={Color} />
+        <Route path="/services/treatments" component={Treatments} />
         <Route path="/book" component={Book} />
         <Route component={NotFound} />
       </Switch>

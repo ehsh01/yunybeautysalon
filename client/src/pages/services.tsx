@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import servicesImage from "@assets/Services-1_1764449487513.png";
 
 export default function Services() {
@@ -9,9 +10,9 @@ export default function Services() {
   const translations = t as any;
 
   const services = [
-    translations.serviceCutting || "Cutting",
-    translations.serviceColor || "Color",
-    translations.serviceTreatments || "Treatments"
+    { name: translations.serviceCutting || "Cutting", href: "/services/cutting" },
+    { name: translations.serviceColor || "Color", href: "/services/color" },
+    { name: translations.serviceTreatments || "Treatments", href: "/services/treatments" }
   ];
 
   return (
@@ -43,9 +44,11 @@ export default function Services() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <span className="text-2xl md:text-4xl font-light uppercase tracking-[0.2em] text-white cursor-default pb-3 block border-b border-white/40 hover:border-white transition-all duration-300 drop-shadow-md">
-                {service}
-              </span>
+              <Link href={service.href}>
+                <span className="text-2xl md:text-4xl font-light uppercase tracking-[0.2em] text-white cursor-pointer pb-3 block border-b border-white/40 hover:border-white transition-all duration-300 drop-shadow-md">
+                  {service.name}
+                </span>
+              </Link>
             </motion.div>
           ))}
         </div>
