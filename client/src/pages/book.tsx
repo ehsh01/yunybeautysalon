@@ -1,13 +1,24 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
+import bookingImage from "@assets/Booking-page_1764446093034.png";
 
 export default function Book() {
   const { t } = useLanguage();
 
   return (
-    <section className="pt-32 pb-24 bg-white min-h-screen flex items-center relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-30" />
-      <div className="container mx-auto px-6 text-center max-w-3xl">
+    <section className="pt-32 pb-24 min-h-screen flex items-center relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={bookingImage}
+          alt="Booking Background"
+          className="w-full h-full object-cover"
+        />
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
+      </div>
+
+      <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -15,7 +26,7 @@ export default function Book() {
         >
           {t.bookTitle}
         </motion.h2>
-        <p className="text-muted-foreground text-lg mb-10 font-light">
+        <p className="text-primary text-lg mb-10 font-light">
           {t.bookText}
         </p>
         <motion.button
@@ -26,7 +37,7 @@ export default function Book() {
         >
           {t.bookButtonMain}
         </motion.button>
-        <p className="mt-6 text-xs text-muted-foreground uppercase tracking-wider opacity-60">
+        <p className="mt-6 text-xs text-primary uppercase tracking-wider opacity-60">
           Secure booking via Square
         </p>
       </div>
