@@ -1,6 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
-import servicesImage from "@assets/Services-1_1764449487513.png";
+import treatmentsImage from "@assets/Treatments_1764455969857.png";
 
 export default function Treatments() {
   const { t } = useLanguage();
@@ -12,11 +12,10 @@ export default function Treatments() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={servicesImage}
+          src={treatmentsImage}
           alt="Treatments Background"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
