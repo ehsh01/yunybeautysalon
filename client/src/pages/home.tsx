@@ -50,7 +50,7 @@ export default function Home() {
             } ${isScrolled && "text-primary"}`}
             onClick={() => scrollToSection("home")}
           >
-            RIK RAK
+            YUNY
           </div>
 
           {/* Desktop Nav */}
@@ -280,8 +280,8 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
             <div>
-              <h4 className="text-2xl font-bold tracking-widest mb-4">RIK RAK</h4>
-              <p className="text-white/60 font-light text-sm uppercase tracking-wider">Salon | Boutique</p>
+              <h4 className="text-2xl font-bold tracking-widest mb-4">YUNY</h4>
+              <p className="text-white/60 font-light text-sm uppercase tracking-wider">Beauty Salon</p>
             </div>
             
             <div className="flex flex-col gap-2 text-sm font-light text-white/80">

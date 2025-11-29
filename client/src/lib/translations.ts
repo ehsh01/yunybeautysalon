@@ -4,8 +4,8 @@ export const translations = {
     navAbout: "About Us",
     navServices: "Services",
     navBook: "Book Appointment",
-    heroTitle: "RIK RAK",
-    heroSubtitle: "SALON | BOUTIQUE",
+    heroTitle: "YUNY",
+    heroSubtitle: "BEAUTY SALON",
     heroBookButton: "Book Appointment",
     aboutTitle: "About Us",
     aboutText: "We are a modern beauty salon offering personalized hair, beauty, and wellness services. Our mission is to provide a relaxing oasis where you can escape the city and focus on yourself.",
@@ -23,15 +23,15 @@ export const translations = {
     bookButtonMain: "Book with Square",
     footerAddress: "1428 Brickell Ave, Miami, FL 33131",
     footerHours: "Open Tuesday to Sunday | 9AM - 7PM",
-    footerCopyright: "© 2025 RIK RAK SALON. All rights reserved."
+    footerCopyright: "© 2025 YUNY BEAUTY SALON. All rights reserved."
   },
   es: {
     navHome: "Inicio",
     navAbout: "Sobre nosotros",
     navServices: "Servicios",
     navBook: "Reservar cita",
-    heroTitle: "RIK RAK",
-    heroSubtitle: "SALÓN | BOUTIQUE",
+    heroTitle: "YUNY",
+    heroSubtitle: "BEAUTY SALON",
     heroBookButton: "Reservar cita",
     aboutTitle: "Sobre nosotros",
     aboutText: "Somos un salón de belleza moderno que ofrece servicios personalizados de cabello, belleza y bienestar. Nuestra misión es proporcionar un oasis relajante donde puedas escapar de la ciudad y concentrarte en ti mismo.",
@@ -49,7 +49,7 @@ export const translations = {
     bookButtonMain: "Reservar con Square",
     footerAddress: "1428 Brickell Ave, Miami, FL 33131",
     footerHours: "Abierto de martes a domingo | 9AM - 7PM",
-    footerCopyright: "© 2025 RIK RAK SALÓN. Todos los derechos reservados."
+    footerCopyright: "© 2025 YUNY BEAUTY SALON. Todos los derechos reservados."
   }
 };
 
