@@ -20,7 +20,7 @@ export default function Book() {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-light mb-12 tracking-widest text-primary whitespace-nowrap"
+          className="text-3xl md:text-5xl lg:text-6xl font-light mb-12 tracking-widest text-black whitespace-nowrap"
         >
           {t.bookTitle}
         </motion.h2>
@@ -31,7 +31,7 @@ export default function Book() {
           transition={{ delay: 0.2 }}
           className="mb-8"
         >
-          <p className="text-lg md:text-xl text-primary font-medium tracking-wide">
+          <p className="text-lg md:text-xl text-black font-medium tracking-wide">
             {(t as any).callAction || "Call 786-436-8830"}
           </p>
         </motion.div>
@@ -40,7 +40,7 @@ export default function Book() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => window.open("https://squareup.com/appointments/book/YOUR_SQUARE_LINK", "_blank")}
-          className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-10 py-5 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
+          className="bg-transparent border border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-10 py-5 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
         >
           {t.bookButtonMain}
         </motion.button>
