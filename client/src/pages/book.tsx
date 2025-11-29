@@ -1,6 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
-import bookingImage from "@assets/Booking-page_1764446093034.png";
+import bookingImage from "@assets/Booking-page-last_1764446873576.png";
 
 export default function Book() {
   const { t } = useLanguage();
