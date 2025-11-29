@@ -18,7 +18,7 @@ export default function Color() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+      <div className="container mx-auto px-6 relative z-10 w-full text-right">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,17 +31,8 @@ export default function Color() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="w-24 h-1 bg-accent mx-auto mb-12" 
+          className="w-24 h-1 bg-accent ml-auto mb-12" 
         />
-
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-xl text-primary/80 leading-relaxed font-light"
-        >
-          {translations.colorText || "From subtle highlights to bold transformations."}
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
