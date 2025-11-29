@@ -20,7 +20,7 @@ export default function About() {
               {t.aboutTitle}
             </h2>
             <div className="w-20 h-1 bg-accent mb-8" />
-            <p className="text-muted-foreground leading-loose text-lg font-light">
+            <p className="text-primary leading-loose text-lg font-light">
               {t.aboutText}
             </p>
           </motion.div>
