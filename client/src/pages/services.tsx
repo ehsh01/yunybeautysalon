@@ -28,15 +28,15 @@ export default function Services() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Title Section - Moved left and bigger */}
-        <div className="mb-12 text-left w-full mt-12">
+        {/* Title Section - Centered */}
+        <div className="mb-12 text-center w-full mt-12">
           <h2 className="text-5xl md:text-7xl font-light tracking-widest text-primary mb-4">
             {t.servicesTitle}
           </h2>
         </div>
         
-        {/* Services List - Centered and underlined */}
-        <div className="flex flex-col items-center space-y-12 mt-16">
+        {/* Services List - Centered and underlined, moved further down */}
+        <div className="flex flex-col items-center space-y-12 mt-32">
           {services.map((service, index) => (
             <motion.div
               key={index}
