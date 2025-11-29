@@ -37,6 +37,40 @@ export default function Cutting() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mb-12"
+        >
+          <p className="text-xl md:text-2xl text-primary font-light italic mb-8">
+            {translations.cuttingSubtitle || "All cuts include wash and blow-dry."}
+          </p>
+          
+          <div className="space-y-4 mb-12">
+            {[
+              translations.cutWomen || "Women’s Cut",
+              translations.cutBangTrim || "Bang Trim",
+              translations.cutMen || "Men’s Cut",
+              translations.cutButterfly || "Butterfly Cut",
+              translations.cutBob || "Bob Cut",
+              translations.cutLayered || "Layered Cut",
+              translations.cutBlowDry || "Blow-Dry"
+            ].map((item, index) => (
+              <p key={index} className="text-lg md:text-xl text-primary font-medium tracking-wide">
+                {item}
+              </p>
+            ))}
+          </div>
+
+          <h3 className="text-2xl md:text-3xl font-light tracking-widest text-primary mb-4">
+            {translations.cuttingExtras || "Extras"}
+          </h3>
+          <p className="text-lg md:text-xl text-primary font-medium tracking-wide">
+            {translations.cutFlatIron || "Flat Iron | Curls"}
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
           className="mt-8"
         >
