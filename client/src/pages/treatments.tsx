@@ -36,6 +36,23 @@ export default function Treatments() {
         />
 
         {/* Text paragraph removed as requested */}
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="text-primary space-y-4 mb-12"
+        >
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentFusio}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentChronologiste}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentBrazilian}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentAmazon}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentOlaplex}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentDeep}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentKeratin}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentSurgery}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentBotox}</p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
