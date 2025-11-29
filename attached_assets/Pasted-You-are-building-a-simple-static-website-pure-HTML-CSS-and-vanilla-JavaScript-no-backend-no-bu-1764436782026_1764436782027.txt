@@ -1,0 +1,207 @@
+You are building a simple static website (pure HTML, CSS, and vanilla JavaScript — no backend, no build tools) for a beauty salon / service business that books appointments using Square.
+
+The visual style should be inspired by: https://www.rikrak.com/
+- Clean, minimal, modern layout.
+- Large centered hero with the brand name and a short descriptor underneath (similar to "RIK RAK" / "SALON | BOUTIQUE").
+- Strong typography, plenty of white space, simple color palette (mostly white, black/dark gray, and one accent color).
+- Clear “Book” / “Book Appointment” button in the hero area.
+Do NOT copy any text from rikrak.com, only take inspiration from the layout, spacing, and overall style.
+
+IMPORTANT: Use the TWO images that are already uploaded in the Replit Files panel as the main visual base:
+- Use the first image as the main hero image or background on the Home section.
+- Use the second image in another key section (for example About Us or Services) so the design feels cohesive.
+- Assume their file names are "hero-image.jpg" and "about-image.jpg" (add comments telling the user to rename these if their actual filenames are different).
+
+====================================
+1) GENERAL STRUCTURE
+====================================
+- The site must be a static website that can be hosted on GitHub Pages or Replit with no server-side code.
+- Use a single-page layout with navigation links that scroll to sections:
+  - Home (main hero / landing section)
+  - About Us
+  - Services
+  - Book Appointment
+- Create a top navigation bar similar in simplicity to rikrak.com:
+  - Logo/brand name on the left.
+  - Nav links (Home, About, Services, Book) in the center or right.
+  - Language toggle (EN / ES) on the right side.
+
+====================================
+2) LANGUAGE SWITCH (ENGLISH / SPANISH)
+====================================
+- At the top-right of the navbar, add a language switch: two buttons or chips labeled “EN” and “ES”.
+- Default language: English.
+- When user clicks ES, all visible text on the page should switch to Spanish.
+- When user clicks EN, text switches back to English.
+- Do NOT reload the page to change languages; use JavaScript to swap text dynamically.
+
+Implementation:
+- Put all text content (nav items, headings, paragraphs, button labels, section titles, descriptions, footer text, etc.) into a JavaScript translations object like:
+
+  const translations = {
+    en: {
+      navHome: "Home",
+      navAbout: "About Us",
+      navServices: "Services",
+      navBook: "Book Appointment",
+      heroTitle: "Your Modern Beauty Destination",
+      heroSubtitle: "Professional salon services in a relaxing, boutique-style space.",
+      heroBookButton: "Book Appointment",
+      aboutTitle: "About Us",
+      aboutText: "We are a modern beauty salon offering personalized hair, beauty, and wellness services.",
+      servicesTitle: "Services",
+      servicesHair: "Haircut & Style",
+      servicesHairDesc: "Customized cuts and blowouts tailored to your style.",
+      servicesColor: "Color & Highlights",
+      servicesColorDesc: "Professional color services with premium products.",
+      servicesNails: "Manicure & Pedicure",
+      servicesNailsDesc: "Complete nail care for hands and feet.",
+      bookTitle: "Book Your Appointment",
+      bookText: "Reserve your visit quickly and securely through our online booking system.",
+      bookButtonMain: "Book with Square",
+      footerAddress: "Miami, Florida",
+      footerHours: "Open Tuesday to Sunday",
+      ...
+    },
+    es: {
+      navHome: "Inicio",
+      navAbout: "Sobre nosotros",
+      navServices: "Servicios",
+      navBook: "Reservar cita",
+      heroTitle: "Tu destino moderno de belleza",
+      heroSubtitle: "Servicios profesionales de salón en un ambiente tipo boutique.",
+      heroBookButton: "Reservar cita",
+      aboutTitle: "Sobre nosotros",
+      aboutText: "Somos un salón de belleza moderno que ofrece servicios personalizados de cabello, belleza y bienestar.",
+      servicesTitle: "Servicios",
+      servicesHair: "Corte y peinado",
+      servicesHairDesc: "Cortes personalizados y peinados adaptados a tu estilo.",
+      servicesColor: "Color y luces",
+      servicesColorDesc: "Servicios de color profesionales con productos de alta calidad.",
+      servicesNails: "Manicure y pedicure",
+      servicesNailsDesc: "Cuidado completo de manos y pies.",
+      bookTitle: "Reserva tu cita",
+      bookText: "Reserva tu visita rápida y de forma segura a través de nuestro sistema de reservas en línea.",
+      bookButtonMain: "Reservar con Square",
+      footerAddress: "Miami, Florida",
+      footerHours: "Abierto de martes a domingo",
+      ...
+    }
+  };
+
+- In HTML, use data attributes (data-i18n="heroTitle", data-i18n="aboutText", etc.) on every text element.
+- In script.js, create a function setLanguage(lang) that:
+  - Loops through all elements with [data-i18n].
+  - Replaces the innerText with translations[lang][key].
+- Optional: store the selected language in localStorage so the site remembers the user’s choice.
+
+====================================
+3) DESIGN & LAYOUT (INSPIRED BY RIKRAK.COM)
+====================================
+- Clean, modern header with:
+  - Brand name in uppercase or strong typography on the left (e.g., "SALON NAME").
+  - Navigation links (Home, About, Services, Book).
+  - EN/ES language toggle on the right.
+- Hero section:
+  - Centered large title similar in feeling to "RIK RAK" but with our own brand text (do not copy).
+  - A smaller subtitle underneath (e.g., “SALON | BOUTIQUE” style, but customized).
+  - Prominent Book button centered or just below title.
+  - Use the hero image ("hero-image.jpg") either as a background with overlay or as a large prominent image near the text.
+- Use a mostly white background with black/dark text and a single accent color (e.g., a soft beige, blush, or gold) for buttons and highlights.
+- Use subtle borders or lines and a lot of white space like rikrak.com for a boutique, upscale feel.
+- Use responsive design so the site looks good on both desktop and mobile.
+
+====================================
+4) SECTIONS
+====================================
+
+HOME (Hero):
+- Big brand/title (data-i18n="heroTitle").
+- Subtitle (data-i18n="heroSubtitle").
+- Primary CTA button: “Book Appointment” / “Reservar cita” (data-i18n="heroBookButton").
+- Button links to a Square booking URL placeholder:
+  href="https://squareup.com/appointments/book/YOUR_SQUARE_LINK"
+- Add a comment in the code telling the user where to put their real Square link.
+
+ABOUT US:
+- Section title (data-i18n="aboutTitle").
+- Paragraph describing the salon (data-i18n="aboutText").
+- Include the second image ("about-image.jpg") in this section, either as a side image or background.
+- Layout can be a two-column design on desktop (image on one side, text on the other) and stacked on mobile.
+
+SERVICES:
+- Section title (data-i18n="servicesTitle").
+- 3–6 service “cards” styled similarly to simple blocks or columns:
+  - Haircut & Style (servicesHair / servicesHairDesc)
+  - Color & Highlights (servicesColor / servicesColorDesc)
+  - Manicure & Pedicure (servicesNails / servicesNailsDesc)
+  - You may add one or two more services with similar translation keys.
+- Each card has a service name and short description, all supported by the translation object.
+
+BOOK APPOINTMENT:
+- Section title (data-i18n="bookTitle").
+- Short explanatory text (data-i18n="bookText").
+- Large main button (data-i18n="bookButtonMain") that links to the same Square URL as the hero button.
+- Optional small note text about appointments being handled securely via Square.
+
+FOOTER:
+- Minimal footer with address and hours, inspired by rikrak.com:
+  - For example:
+    - Address line (data-i18n="footerAddress")
+    - Hours line (data-i18n="footerHours")
+  - Optional social media icons/links (Instagram, Facebook) with placeholders.
+
+====================================
+5) IMPLEMENTATION DETAILS
+====================================
+Files:
+- index.html
+- styles.css
+- script.js
+
+index.html:
+- Includes:
+  - <header> with nav, logo, and language toggle.
+  - <main> with sections: Home, About, Services, Book.
+  - <footer> with basic info.
+- Use data-i18n attributes on all text elements that need translation.
+- Use <img src="./hero-image.jpg"> and <img src="./about-image.jpg"> with descriptive alt text.
+- Add comments explaining that if the uploaded filenames are different, the user should change the src values.
+
+styles.css:
+- Mobile-first responsive styling.
+- Sticky or fixed header that stays at the top while scrolling.
+- Simple, grid or flex-based layout for sections.
+- Boutiquey, minimal styling inspired by rikrak.com: uppercase headings, generous spacing, thin dividers, and button styles that match the aesthetic.
+- Rounded corners on buttons and service cards.
+- Use a Google Font (like "Poppins", "Montserrat", or a similar modern sans-serif).
+
+script.js:
+- Define the translations object with all needed keys for EN and ES.
+- On DOMContentLoaded, call setLanguage('en') by default.
+- Add event listeners to the EN and ES buttons/toggle.
+- Implement setLanguage(lang) to:
+  - Find all elements with [data-i18n].
+  - Read the key from data-i18n.
+  - Set element.textContent = translations[lang][key].
+- Optional: save selected language to localStorage and apply it on page load if present.
+
+====================================
+6) CLEAN, COMMENTED CODE
+====================================
+- Add clear comments explaining:
+  - Where to update the Square booking link.
+  - Where to customize the translations in both English and Spanish.
+  - Where to update image filenames to match the user’s actual uploaded files.
+- Make sure that after generation, the site runs by simply opening index.html in the Replit preview.
+
+Deliver the full code for:
+- index.html
+- styles.css
+- script.js
+
+The final result should be:
+- A complete, bilingual (EN/ES) static beauty salon website.
+- Visually inspired by https://www.rikrak.com/ (layout, minimal style, hero, buttons, spacing).
+- Ready to be hosted on Replit or GitHub Pages.
+- Fully integrated with a Square booking link via simple anchor tags.
