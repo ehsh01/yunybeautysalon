@@ -37,23 +37,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   // Determine if we are on the home page for specific styling (transparent header)
   const isHome = location === "/";
-  const headerBgClass = isHome && !isScrolled 
-    ? "bg-transparent py-6" 
-    : "bg-white/95 backdrop-blur-md shadow-sm py-4";
+  const headerBgClass = "absolute bg-transparent py-6";
     
-  const textColorClass = isHome && !isScrolled 
-    ? "text-white drop-shadow-md" 
-    : "text-foreground";
+  const textColorClass = isHome ? "text-white drop-shadow-md" : "text-primary";
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerBgClass}`}>
+      <nav className={`top-0 w-full z-50 transition-all duration-300 ${headerBgClass}`}>
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
             <div 
               className={`text-2xl font-bold tracking-widest uppercase cursor-pointer ${
-                isHome && !isScrolled ? "text-white drop-shadow-md" : "text-primary"
+                isHome ? "text-white drop-shadow-md" : "text-primary"
               }`}
             >
               YUNY
@@ -66,7 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link key={item.href} href={item.href}>
                 <a 
                   className={`text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors ${
-                    isHome && !isScrolled ? "text-white drop-shadow-sm" : "text-foreground"
+                    isHome ? "text-white drop-shadow-sm" : "text-primary"
                   } ${location === item.href ? "text-accent underline underline-offset-4" : ""}`}
                 >
                   {item.label}
@@ -77,9 +73,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <button
               onClick={toggleLang}
               className={`flex items-center gap-1 text-sm font-medium uppercase border px-3 py-1 rounded-full transition-colors ${
-                isHome && !isScrolled 
+                isHome 
                   ? "text-white border-white/50 hover:bg-white/10" 
-                  : "text-foreground border-foreground/20 hover:border-accent hover:text-accent"
+                  : "text-primary border-primary/20 hover:border-accent hover:text-accent"
               }`}
             >
               <Globe className="w-3 h-3" />
