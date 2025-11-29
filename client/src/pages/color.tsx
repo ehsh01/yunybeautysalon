@@ -37,6 +37,38 @@ export default function Color() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="text-white space-y-2 mb-12"
+        >
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorBase}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorFull}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorBalayage}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorPartialHighlights}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorFullHighlights}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorLowlights}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorGloss}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorPlatinum}</p>
+          <p className="text-lg font-light tracking-wider">{translations.colorBlondes}</p>
+          <p className="text-lg font-light tracking-wider">{translations.colorBrunette}</p>
+          <p className="text-lg font-light tracking-wider">{translations.colorReds}</p>
+          
+          <p className="text-sm font-light italic mt-6 opacity-90 max-w-md ml-auto">
+            {translations.colorDisclaimer1}
+          </p>
+
+          <div className="h-px bg-white/30 w-full max-w-md ml-auto my-8"></div>
+
+          <p className="text-xl font-medium uppercase tracking-widest">{translations.colorCorrection}</p>
+          <p className="text-lg font-light uppercase tracking-wider">{translations.colorConsultation}</p>
+          
+          <p className="text-sm font-light italic mt-2 opacity-90 max-w-md ml-auto">
+            {translations.colorDisclaimer2}
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
           className="mt-16"
         >
