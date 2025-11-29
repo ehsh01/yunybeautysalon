@@ -8,7 +8,7 @@ export const translations = {
     heroSubtitle: "BEAUTY SALON",
     heroBookButton: "Book",
     aboutTitle: "About Us",
-    aboutText: "We are a modern beauty salon offering personalized hair, beauty, and wellness services. Our mission is to provide a relaxing oasis where you can escape the city and focus on yourself.",
+    aboutText: "Our mission is to make every person who walks through our doors feel confident, cared for, and beautifully transformed. We blend skill, attention to detail, and artistry to create looks that celebrate your unique style.",
     servicesTitle: "Services",
     serviceCutting: "Cutting",
     serviceColor: "Color",
