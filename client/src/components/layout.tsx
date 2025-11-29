@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   // Determine if we are on a page that needs transparent/white header
   const isTransparentPage = location === "/" || 
-                            location.startsWith("/services") || 
+                            (location.startsWith("/services") && location !== "/services/treatments") || 
                             location === "/book";
   
   const headerBgClass = "absolute bg-transparent py-6";
