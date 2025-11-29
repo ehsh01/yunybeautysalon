@@ -21,7 +21,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[0.15em] mb-4"
+          className="text-5xl md:text-7xl lg:text-8xl font-light tracking-[0.15em] mb-4"
         >
           {t.heroTitle}
         </motion.h1>
