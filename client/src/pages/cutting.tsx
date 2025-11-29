@@ -76,7 +76,7 @@ export default function Cutting() {
         >
              <button
             onClick={() => window.location.href = "/book"}
-            className="bg-primary text-white hover:bg-accent transition-colors px-8 py-4 text-sm uppercase tracking-widest font-bold shadow-lg"
+            className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}
           </button>
