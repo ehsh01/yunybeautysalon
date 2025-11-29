@@ -24,7 +24,8 @@ export default function Treatments() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-8"
         >
-          {translations.treatmentsTitle || "Hair Treatments"}
+          {/* Replaced "Hair Treatments" with "Treatments" and removed text below as requested */}
+          {translations.serviceTreatments || "Treatments"}
         </motion.h1>
         
         <motion.div 
@@ -34,14 +35,7 @@ export default function Treatments() {
           className="w-24 h-1 bg-accent mx-auto mb-12" 
         />
 
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-xl text-primary/80 leading-relaxed font-light"
-        >
-          {translations.treatmentsText || "Revitalize your hair with our specialized treatments."}
-        </motion.p>
+        {/* Text paragraph removed as requested */}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
