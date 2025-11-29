@@ -35,11 +35,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { href: "/services", label: t.navServices },
   ];
 
-  // Determine if we are on the home page for specific styling (transparent header)
-  const isHome = location === "/";
+  // Determine if we are on a page that needs transparent/white header
+  const isTransparentPage = location === "/" || 
+                            location.startsWith("/services") || 
+                            location === "/book";
+  
   const headerBgClass = "absolute bg-transparent py-6";
     
-  const textColorClass = isHome ? "text-white drop-shadow-md" : "text-primary";
+  const textColorClass = isTransparentPage ? "text-white drop-shadow-md" : "text-primary";
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -48,7 +51,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
             <div 
-              className="text-2xl font-light tracking-widest uppercase cursor-pointer"
+              className={`text-2xl font-light tracking-widest uppercase cursor-pointer ${
+                isTransparentPage ? "text-white drop-shadow-md" : "text-primary"
+              }`}
             >
               {/* Logo removed */}
             </div>
@@ -60,7 +65,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link key={item.href} href={item.href}>
                 <a 
                   className={`text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors ${
-                    isHome ? "text-white drop-shadow-sm" : "text-primary"
+                    isTransparentPage ? "text-white drop-shadow-sm" : "text-primary"
                   } ${location === item.href ? "text-accent underline underline-offset-4" : ""}`}
                 >
                   {item.label}
@@ -71,7 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <button
               onClick={toggleLang}
               className={`flex items-center gap-1 text-sm font-medium uppercase border px-3 py-1 rounded-full transition-colors ${
-                isHome 
+                isTransparentPage 
                   ? "text-white border-white/50 hover:bg-white/10" 
                   : "text-primary border-primary/20 hover:border-accent hover:text-accent"
               }`}
