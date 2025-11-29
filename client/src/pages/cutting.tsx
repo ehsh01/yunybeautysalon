@@ -34,15 +34,6 @@ export default function Cutting() {
           className="w-24 h-1 bg-accent mx-auto mb-12" 
         />
 
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-xl text-primary/80 leading-relaxed font-light"
-        >
-          {translations.cuttingText || "Precision cuts tailored to your face shape and lifestyle."}
-        </motion.p>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
