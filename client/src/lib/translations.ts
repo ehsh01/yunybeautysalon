@@ -1,0 +1,57 @@
+export const translations = {
+  en: {
+    navHome: "Home",
+    navAbout: "About Us",
+    navServices: "Services",
+    navBook: "Book Appointment",
+    heroTitle: "RIK RAK",
+    heroSubtitle: "SALON | BOUTIQUE",
+    heroBookButton: "Book Appointment",
+    aboutTitle: "About Us",
+    aboutText: "We are a modern beauty salon offering personalized hair, beauty, and wellness services. Our mission is to provide a relaxing oasis where you can escape the city and focus on yourself.",
+    servicesTitle: "Services",
+    servicesHair: "Haircut & Style",
+    servicesHairDesc: "Customized cuts and blowouts tailored to your style.",
+    servicesColor: "Color & Highlights",
+    servicesColorDesc: "Professional color services with premium products.",
+    servicesNails: "Manicure & Pedicure",
+    servicesNailsDesc: "Complete nail care for hands and feet.",
+    servicesMakeup: "Makeup Artistry",
+    servicesMakeupDesc: "Full face applications for events and weddings.",
+    bookTitle: "Book Your Appointment",
+    bookText: "Reserve your visit quickly and securely through our online booking system.",
+    bookButtonMain: "Book with Square",
+    footerAddress: "1428 Brickell Ave, Miami, FL 33131",
+    footerHours: "Open Tuesday to Sunday | 9AM - 7PM",
+    footerCopyright: "© 2025 RIK RAK SALON. All rights reserved."
+  },
+  es: {
+    navHome: "Inicio",
+    navAbout: "Sobre nosotros",
+    navServices: "Servicios",
+    navBook: "Reservar cita",
+    heroTitle: "RIK RAK",
+    heroSubtitle: "SALÓN | BOUTIQUE",
+    heroBookButton: "Reservar cita",
+    aboutTitle: "Sobre nosotros",
+    aboutText: "Somos un salón de belleza moderno que ofrece servicios personalizados de cabello, belleza y bienestar. Nuestra misión es proporcionar un oasis relajante donde puedas escapar de la ciudad y concentrarte en ti mismo.",
+    servicesTitle: "Servicios",
+    servicesHair: "Corte y peinado",
+    servicesHairDesc: "Cortes personalizados y peinados adaptados a tu estilo.",
+    servicesColor: "Color y luces",
+    servicesColorDesc: "Servicios de color profesionales con productos de alta calidad.",
+    servicesNails: "Manicure y pedicure",
+    servicesNailsDesc: "Cuidado completo de manos y pies.",
+    servicesMakeup: "Maquillaje Artístico",
+    servicesMakeupDesc: "Aplicaciones completas para eventos y bodas.",
+    bookTitle: "Reserva tu cita",
+    bookText: "Reserva tu visita rápida y de forma segura a través de nuestro sistema de reservas en línea.",
+    bookButtonMain: "Reservar con Square",
+    footerAddress: "1428 Brickell Ave, Miami, FL 33131",
+    footerHours: "Abierto de martes a domingo | 9AM - 7PM",
+    footerCopyright: "© 2025 RIK RAK SALÓN. Todos los derechos reservados."
+  }
+};
+
+export type Language = 'en' | 'es';
+export type TranslationKey = keyof typeof translations.en;
