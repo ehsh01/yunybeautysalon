@@ -136,7 +136,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex flex-col gap-4">
               <div>
                 <h4 className="text-2xl font-light tracking-widest mb-2 text-primary">YUNY</h4>
-                <p className="text-primary font-light text-sm uppercase tracking-wider">Beauty Salon</p>
+                <p className="text-black font-medium text-sm uppercase tracking-wider">Beauty Salon</p>
               </div>
               <div className="flex gap-4 justify-center md:justify-start">
                 {/* Social placeholders */}
