@@ -29,7 +29,7 @@ export const translations = {
     heroSubtitle: "BEAUTY SALON",
     heroBookButton: "Reservar",
     aboutTitle: "Sobre nosotros",
-    aboutText: "Somos un salón de belleza moderno que ofrece servicios personalizados de cabello, belleza y bienestar. Nuestra misión es proporcionar un oasis relajante donde puedas escapar de la ciudad y concentrarte en ti mismo.",
+    aboutText: "Nuestra misión es que cada persona que entra por nuestras puertas se sienta segura, cuidada y bellamente transformada. Combinamos habilidad, atención al detalle y arte para crear looks que celebran tu estilo único.",
     servicesTitle: "Servicios",
     serviceCutting: "Corte",
     serviceColor: "Color",
