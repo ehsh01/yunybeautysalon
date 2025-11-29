@@ -29,8 +29,8 @@ export default function Services() {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Title Section - Moved left and bigger */}
-        <div className="mb-12 text-left max-w-4xl mx-auto w-full mt-12">
-          <h2 className="text-5xl md:text-7xl font-light tracking-widest text-primary mb-4 pl-4 md:pl-12">
+        <div className="mb-12 text-left w-full mt-12">
+          <h2 className="text-5xl md:text-7xl font-light tracking-widest text-primary mb-4">
             {t.servicesTitle}
           </h2>
         </div>
