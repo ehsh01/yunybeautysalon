@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    navHome: "Home",
+    navHome: "YUNY",
     navAbout: "About Us",
     navServices: "Services",
     navBook: "Book Appointment",
@@ -26,7 +26,7 @@ export const translations = {
     footerCopyright: "© 2025 YUNY BEAUTY SALON. All rights reserved."
   },
   es: {
-    navHome: "Inicio",
+    navHome: "YUNY",
     navAbout: "Sobre nosotros",
     navServices: "Servicios",
     navBook: "Reservar cita",
