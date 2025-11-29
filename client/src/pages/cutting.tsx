@@ -18,27 +18,27 @@ export default function Cutting() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+      <div className="container mx-auto px-6 relative z-10 text-left w-full">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-8"
         >
-          {translations.cuttingTitle || "Cutting Services"}
+          {translations.cuttingTitle || "Cutting"}
         </motion.h1>
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="w-24 h-1 bg-accent mx-auto mb-12" 
+          className="w-24 h-1 bg-accent mb-12" 
         />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="mt-16"
+          className="mt-8"
         >
              <button
             onClick={() => window.location.href = "/book"}
