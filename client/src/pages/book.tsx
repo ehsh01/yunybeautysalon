@@ -29,7 +29,7 @@ export default function Book() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => window.open("https://squareup.com/appointments/book/YOUR_SQUARE_LINK", "_blank")}
-          className="bg-primary text-white hover:bg-accent transition-colors px-10 py-5 text-sm uppercase tracking-widest font-bold shadow-lg"
+          className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-10 py-5 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
         >
           {t.bookButtonMain}
         </motion.button>
