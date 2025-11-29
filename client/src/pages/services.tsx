@@ -23,8 +23,6 @@ export default function Services() {
           alt="Services Background"
           className="w-full h-full object-cover"
         />
-        {/* Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
