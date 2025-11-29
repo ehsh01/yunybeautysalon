@@ -28,7 +28,7 @@ export default function Services() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Title Section - Centered */}
         <div className="mb-12 text-center w-full mt-12">
-          <h2 className="text-5xl md:text-7xl font-light tracking-widest text-primary mb-4">
+          <h2 className="text-5xl md:text-7xl font-light tracking-widest text-white mb-4">
             {t.servicesTitle}
           </h2>
         </div>
@@ -43,7 +43,7 @@ export default function Services() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <span className="text-2xl md:text-4xl font-light uppercase tracking-[0.2em] text-primary cursor-default pb-3 block border-b border-primary/20 hover:border-accent transition-all duration-300">
+              <span className="text-2xl md:text-4xl font-light uppercase tracking-[0.2em] text-white cursor-default pb-3 block border-b border-white/40 hover:border-white transition-all duration-300 drop-shadow-md">
                 {service}
               </span>
             </motion.div>
