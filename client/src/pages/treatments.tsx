@@ -1,6 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
-import treatmentsImage from "@assets/Treatments_1764455969857.png";
+import treatmentsImage from "@assets/Treatments_1764509494529.png";
 
 export default function Treatments() {
   const { t } = useLanguage();
@@ -18,7 +18,7 @@ export default function Treatments() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+      <div className="container mx-auto px-6 relative z-10 w-full text-left">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export default function Treatments() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="w-24 h-1 bg-accent mx-auto mb-12" 
+          className="w-24 h-1 bg-accent mb-12" 
         />
 
         {/* Text paragraph removed as requested */}
