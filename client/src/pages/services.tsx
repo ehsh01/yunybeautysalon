@@ -1,7 +1,7 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import servicesImage from "@assets/Services-1_1764449487513.png";
+import servicesImage from "@assets/Services-latest_1764510045140.png";
 
 export default function Services() {
   const { t } = useLanguage();
