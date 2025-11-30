@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
+import { SEO } from "@/components/seo";
 import bookingImage from "@assets/Booking-page-last_1764446873576.png";
 
 export default function Book() {
@@ -7,6 +8,11 @@ export default function Book() {
 
   return (
     <section className="pt-32 pb-24 min-h-screen flex items-start justify-center relative overflow-hidden">
+      <SEO 
+        title="Book Appointment | YUNY Beauty Salon" 
+        description="Book your appointment at YUNY Beauty Salon in Bristol, TN. Call 786-436-8830 or book online."
+        image={bookingImage}
+      />
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img

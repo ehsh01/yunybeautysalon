@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
+import { SEO } from "@/components/seo";
 import cuttingImage from "@assets/Cutting_1764503911117.png";
 
 export default function Cutting() {
@@ -9,6 +10,11 @@ export default function Cutting() {
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">
+      <SEO 
+        title="Hair Cutting & Styling | YUNY Beauty Salon" 
+        description="Precision haircuts for women and men in Bristol, TN. Includes wash, blow-dry, and styling options."
+        image={cuttingImage}
+      />
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img

@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
+import { SEO } from "@/components/seo";
 import treatmentsImage from "@assets/Treatments_1764509494529.png";
 
 export default function Treatments() {
@@ -9,6 +10,11 @@ export default function Treatments() {
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">
+      <SEO 
+        title="Hair Treatments | YUNY Beauty Salon" 
+        description="Revitalize your hair with our luxury treatments including Kerastase, Brazilian Blowout, Olaplex, and more."
+        image={treatmentsImage}
+      />
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img

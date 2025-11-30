@@ -1,6 +1,7 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { SEO } from "@/components/seo";
 import servicesImage from "@assets/Services-latest_1764510045140.png";
 
 export default function Services() {
@@ -17,6 +18,11 @@ export default function Services() {
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col">
+      <SEO 
+        title="Services | YUNY Beauty Salon" 
+        description="Explore our range of hair services including precision cutting, expert coloring, and revitalizing treatments."
+        image={servicesImage}
+      />
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img

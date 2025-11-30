@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
+import { SEO } from "@/components/seo";
 import colorImage from "@assets/Color-sharper_1764508389206.png";
 
 export default function Color() {
@@ -9,6 +10,11 @@ export default function Color() {
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">
+      <SEO 
+        title="Hair Color Services | YUNY Beauty Salon" 
+        description="Expert hair coloring services in Bristol, TN. Balayage, highlights, color correction, and more."
+        image={colorImage}
+      />
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img

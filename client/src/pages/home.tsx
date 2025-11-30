@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
+import { SEO } from "@/components/seo";
 import heroImage from "@assets/Yuny-Main_1764502456223.png";
 
 export default function Home() {
@@ -7,6 +8,11 @@ export default function Home() {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <SEO 
+        title="YUNY Beauty Salon | Bristol, TN" 
+        description="Professional hair salon in Bristol, TN offering cutting, coloring, balayage, and luxury hair treatments. Book your appointment today."
+        image={heroImage}
+      />
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
