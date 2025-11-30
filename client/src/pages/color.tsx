@@ -18,7 +18,7 @@ export default function Color() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 w-full text-right">
+      <div className="container mx-auto px-6 relative z-10 w-full text-left">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function Color() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="w-24 h-1 bg-accent ml-auto mb-12" 
+          className="w-24 h-1 bg-accent mb-12" 
         />
 
         <motion.div
@@ -52,16 +52,16 @@ export default function Color() {
           <p className="text-lg font-light tracking-wider">{translations.colorBrunette}</p>
           <p className="text-lg font-light tracking-wider">{translations.colorReds}</p>
           
-          <p className="text-sm font-light italic mt-6 opacity-90 max-w-md ml-auto">
+          <p className="text-sm font-light italic mt-6 opacity-90 max-w-md">
             {translations.colorDisclaimer1}
           </p>
 
-          <div className="h-px bg-white/30 w-full max-w-md ml-auto my-8"></div>
+          <div className="h-px bg-white/30 w-full max-w-md my-8"></div>
 
           <p className="text-xl font-medium uppercase tracking-widest">{translations.colorCorrection}</p>
           <p className="text-lg font-light uppercase tracking-wider">{translations.colorConsultation}</p>
           
-          <p className="text-sm font-light italic mt-2 opacity-90 max-w-md ml-auto">
+          <p className="text-sm font-light italic mt-2 opacity-90 max-w-md">
             {translations.colorDisclaimer2}
           </p>
         </motion.div>
