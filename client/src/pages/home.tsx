@@ -1,6 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
-import heroImage from "@assets/Redheadmodel-main_1764440271238.png";
+import heroImage from "@assets/Yuny-Main_1764502456223.png";
 
 export default function Home() {
   const { t } = useLanguage();
