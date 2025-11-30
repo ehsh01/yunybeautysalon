@@ -35,7 +35,7 @@ export default function Services() {
         </div>
         
         {/* Services List - Centered and underlined, moved further down */}
-        <div className="flex flex-col items-center space-y-12 mt-32">
+        <div className="flex flex-col items-center space-y-12 mt-16 md:mt-32">
           {services.map((service, index) => (
             <motion.div
               key={index}

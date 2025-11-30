@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Navigation */}
-      <nav className={`top-0 w-full z-50 transition-all duration-300 ${headerBgClass}`}>
+      <nav className={`top-0 w-full z-50 transition-all duration-300 ${headerBgClass} py-4 md:py-6`}>
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
             <div 
