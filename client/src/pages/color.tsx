@@ -1,6 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
-import colorImage from "@assets/Color_1764504528781.png";
+import colorImage from "@assets/Color-new_1764507955699.png";
 
 export default function Color() {
   const { t } = useLanguage();
