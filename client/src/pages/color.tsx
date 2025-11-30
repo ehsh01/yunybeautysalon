@@ -22,7 +22,7 @@ export default function Color() {
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-light tracking-widest text-white mb-8"
+          className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-8"
         >
           {translations.colorTitle || "Color"}
         </motion.h1>
@@ -38,7 +38,7 @@ export default function Color() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-white space-y-2 mb-12"
+          className="text-primary space-y-2 mb-12"
         >
           <p className="text-lg font-light uppercase tracking-wider">{translations.colorBase}</p>
           <p className="text-lg font-light uppercase tracking-wider">{translations.colorFull}</p>
@@ -56,7 +56,7 @@ export default function Color() {
             {translations.colorDisclaimer1}
           </p>
 
-          <div className="h-px bg-white/30 w-full max-w-md my-8"></div>
+          <div className="h-px bg-primary/30 w-full max-w-md my-8"></div>
 
           <p className="text-xl font-medium uppercase tracking-widest">{translations.colorCorrection}</p>
           <p className="text-lg font-light uppercase tracking-wider">{translations.colorConsultation}</p>
@@ -74,7 +74,7 @@ export default function Color() {
         >
             <button
             onClick={() => window.location.href = "/book"}
-            className="bg-transparent border border-white text-white hover:bg-white hover:text-primary transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
+            className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}
           </button>
