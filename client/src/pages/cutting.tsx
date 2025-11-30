@@ -1,6 +1,6 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
-import cuttingImage from "@assets/Cutting_1764452336239.png";
+import cuttingImage from "@assets/Cutting_1764503118652.png";
 
 export default function Cutting() {
   const { t } = useLanguage();
