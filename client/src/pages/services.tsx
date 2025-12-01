@@ -1,3 +1,4 @@
+import React from "react";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -11,15 +12,21 @@ export default function Services() {
   const translations = t as any;
 
   const services = [
-    { name: translations.serviceCutting || "Cutting", href: "/services/cutting" },
+    {
+      name: translations.serviceCutting || "Cutting",
+      href: "/services/cutting",
+    },
     { name: translations.serviceColor || "Color", href: "/services/color" },
-    { name: translations.serviceTreatments || "Treatments", href: "/services/treatments" }
+    {
+      name: translations.serviceTreatments || "Treatments",
+      href: "/services/treatments",
+    },
   ];
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col">
-      <SEO 
-        title="Services | YUNY Beauty Salon" 
+      <SEO
+        title="Services | YUNY Beauty Salon"
         description="Explore our range of hair services including precision cutting, expert coloring, and revitalizing treatments."
         image={servicesImage}
       />
@@ -39,7 +46,7 @@ export default function Services() {
             {t.servicesTitle}
           </h2>
         </div>
-        
+
         {/* Services List - Centered and underlined, moved further down */}
         <div className="flex flex-col items-center space-y-12 mt-16 md:mt-32">
           {services.map((service, index) => (

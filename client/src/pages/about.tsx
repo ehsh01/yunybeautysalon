@@ -1,3 +1,4 @@
+import React from "react";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
@@ -8,8 +9,8 @@ export default function About() {
 
   return (
     <section className="pt-32 pb-24 bg-white min-h-screen flex items-center">
-      <SEO 
-        title="About Us | YUNY Beauty Salon" 
+      <SEO
+        title="About Us | YUNY Beauty Salon"
         description="Learn about YUNY Beauty Salon, a boutique salon in Bristol, TN dedicated to providing exceptional hair care services in a relaxing environment."
         image={aboutImage}
       />

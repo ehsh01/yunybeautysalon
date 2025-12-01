@@ -1,3 +1,4 @@
+import React from "react";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
@@ -10,8 +11,8 @@ export default function Treatments() {
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">
-      <SEO 
-        title="Hair Treatments | YUNY Beauty Salon" 
+      <SEO
+        title="Hair Treatments | YUNY Beauty Salon"
         description="Revitalize your hair with our luxury treatments including Kerastase, Brazilian Blowout, Olaplex, and more."
         image={treatmentsImage}
       />
@@ -25,7 +26,7 @@ export default function Treatments() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 w-full text-left">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-8"
@@ -33,31 +34,49 @@ export default function Treatments() {
           {/* Replaced "Hair Treatments" with "Treatments" and removed text below as requested */}
           {translations.serviceTreatments || "Treatments"}
         </motion.h1>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="w-24 h-1 bg-accent mb-12" 
+          className="w-24 h-1 bg-accent mb-12"
         />
 
         {/* Text paragraph removed as requested */}
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           className="text-primary space-y-4 mb-12"
         >
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentFusio}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentChronologiste}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentBrazilian}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentAmazon}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentOlaplex}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentDeep}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentKeratin}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentSurgery}</p>
-          <p className="text-lg font-light uppercase tracking-wider">{translations.treatmentBotox}</p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentFusio}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentChronologiste}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentBrazilian}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentAmazon}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentOlaplex}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentDeep}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentKeratin}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentSurgery}
+          </p>
+          <p className="text-lg font-light uppercase tracking-wider">
+            {translations.treatmentBotox}
+          </p>
         </motion.div>
 
         <motion.div
@@ -66,8 +85,8 @@ export default function Treatments() {
           transition={{ delay: 0.6 }}
           className="mt-16"
         >
-             <button
-            onClick={() => window.location.href = "/book"}
+          <button
+            onClick={() => (window.location.href = "/book")}
             className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}
