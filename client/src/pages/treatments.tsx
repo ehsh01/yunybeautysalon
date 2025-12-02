@@ -30,7 +30,7 @@ export default function Treatments() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-8"
+          className="text-4xl md:text-6xl font-light tracking-widest text-white mb-8"
         >
           {/* Replaced "Hair Treatments" with "Treatments" and removed text below as requested */}
           {translations.serviceTreatments || "Treatments"}
@@ -49,7 +49,7 @@ export default function Treatments() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-primary space-y-4 mb-12"
+          className="text-white space-y-4 mb-12"
         >
           <p className="text-lg font-light uppercase tracking-wider">
             {translations.treatmentFusio}
@@ -88,7 +88,7 @@ export default function Treatments() {
         >
           <button
             onClick={() => setLocation("/book")}
-            className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
+            className="bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}
           </button>

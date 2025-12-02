@@ -30,7 +30,7 @@ export default function Cutting() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-8"
+          className="text-4xl md:text-6xl font-light tracking-widest text-white mb-8"
         >
           {translations.cuttingTitle || "Cutting"}
         </motion.h1>
@@ -48,7 +48,7 @@ export default function Cutting() {
           transition={{ delay: 0.3 }}
           className="mb-12"
         >
-          <p className="text-xl md:text-2xl text-primary font-light italic mb-8">
+          <p className="text-xl md:text-2xl text-white font-light italic mb-8">
             {translations.cuttingSubtitle ||
               "All cuts include wash and blow-dry."}
           </p>
@@ -65,17 +65,17 @@ export default function Cutting() {
             ].map((item, index) => (
               <p
                 key={index}
-                className="text-lg md:text-xl text-primary font-medium tracking-wide"
+                className="text-lg md:text-xl text-white font-medium tracking-wide"
               >
                 {item}
               </p>
             ))}
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-light tracking-widest text-primary mb-4">
+          <h3 className="text-2xl md:text-3xl font-light tracking-widest text-white mb-4">
             {translations.cuttingExtras || "Extras"}
           </h3>
-          <p className="text-lg md:text-xl text-primary font-medium tracking-wide">
+          <p className="text-lg md:text-xl text-white font-medium tracking-wide">
             {translations.cutFlatIron || "Flat Iron | Curls"}
           </p>
         </motion.div>
@@ -88,7 +88,7 @@ export default function Cutting() {
         >
           <button
             onClick={() => setLocation("/book")}
-            className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
+            className="bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}
           </button>
