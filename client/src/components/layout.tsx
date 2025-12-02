@@ -65,16 +65,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a
-                  className={`text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors ${
-                    isTransparentPage
-                      ? "text-white drop-shadow-sm"
-                      : "text-black font-bold"
-                  } ${location === item.href ? "text-accent underline underline-offset-4" : ""}`}
-                >
-                  {item.label}
-                </a>
+              <Link 
+                key={item.href} 
+                href={item.href}
+                className={`text-sm font-medium uppercase tracking-wider hover:text-accent transition-colors ${
+                  isTransparentPage
+                    ? "text-white drop-shadow-sm"
+                    : "text-black font-bold"
+                } ${location === item.href ? "text-accent underline underline-offset-4" : ""}`}
+              >
+                {item.label}
               </Link>
             ))}
 
@@ -119,10 +119,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             >
               <div className="flex flex-col p-6 space-y-4">
                 {navItems.map((item) => (
-                  <Link key={item.href} href={item.href}>
-                    <a className="text-left text-lg font-medium uppercase tracking-wider text-foreground hover:text-accent block">
-                      {item.label}
-                    </a>
+                  <Link 
+                    key={item.href} 
+                    href={item.href}
+                    className="text-left text-lg font-medium uppercase tracking-wider text-foreground hover:text-accent block"
+                  >
+                    {item.label}
                   </Link>
                 ))}
               </div>
