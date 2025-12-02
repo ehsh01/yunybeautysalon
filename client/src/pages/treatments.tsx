@@ -1,13 +1,14 @@
-import React from "react";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import treatmentsImage from "@assets/Treatments_1764509494529.png";
+import { useLocation } from "wouter";
 
 export default function Treatments() {
   const { t } = useLanguage();
   // Cast t to any to access new properties
   const translations = t as any;
+  const [_, setLocation] = useLocation();
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">
@@ -86,7 +87,7 @@ export default function Treatments() {
           className="mt-16"
         >
           <button
-            onClick={() => (window.location.href = "/book")}
+            onClick={() => setLocation("/book")}
             className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}

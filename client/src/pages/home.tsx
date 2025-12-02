@@ -1,16 +1,17 @@
-import React from "react";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import heroImage from "@assets/Yuny-Main_1764502456223.png";
+import { useLocation } from "wouter";
 
 export default function Home() {
   const { t } = useLanguage();
+  const [_, setLocation] = useLocation();
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <SEO
-        title="YUNY Beauty Salon | Bristol, TN"
+      <SEO 
+        title="YUNY Beauty Salon | Bristol, TN" 
         description="Professional hair salon in Bristol, TN offering cutting, coloring, balayage, and luxury hair treatments. Book your appointment today."
         image={heroImage}
       />
@@ -22,9 +23,9 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/30" />
       </div>
-
+      
       <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto mt-20">
-        <motion.h1
+        <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -32,7 +33,7 @@ export default function Home() {
         >
           {t.heroTitle}
         </motion.h1>
-        <motion.p
+        <motion.p 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -44,13 +45,13 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          onClick={() => (window.location.href = "/book")}
+          onClick={() => setLocation("/book")}
           className="bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold cursor-pointer"
         >
           {t.heroBookButton}
         </motion.button>
-
-        <motion.div
+        
+        <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
