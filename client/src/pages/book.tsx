@@ -3,9 +3,11 @@ import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import bookingImage from "@assets/Booking-page-last_1764446873576.png";
+import { useSquareAppointmentWidget } from "@/hooks/use-square-widget";
 
 export default function Book() {
   const { t } = useLanguage();
+  useSquareAppointmentWidget();
 
   return (
     <section className="pt-32 pb-24 min-h-screen flex items-start justify-center relative overflow-hidden">

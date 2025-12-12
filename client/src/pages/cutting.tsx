@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import cuttingImage from "@assets/Cutting_1764503911117.png";
 import { useLocation } from "wouter";
+import { useSquareAppointmentWidget } from "@/hooks/use-square-widget";
 
 export default function Cutting() {
   const { t } = useLanguage();
   // Cast t to any to access new properties
   const translations = t as any;
   const [_, setLocation] = useLocation();
+  useSquareAppointmentWidget();
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">

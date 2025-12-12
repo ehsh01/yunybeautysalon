@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import heroImage from "@assets/Yuny-Main_1764502456223.png";
 import { useLocation } from "wouter";
+import { useSquareAppointmentWidget } from "@/hooks/use-square-widget";
 
 export default function Home() {
   const { t } = useLanguage();
   const [_, setLocation] = useLocation();
+  useSquareAppointmentWidget();
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
