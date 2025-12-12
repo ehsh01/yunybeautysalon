@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Redirect to the same path but with a hash
+      // e.g. /book -> /#/book
+      var path = window.location.pathname;
+      var search = window.location.search;
+      
+      // Only redirect if we are not at root (though 404 implies we are not)
+      // and prevent infinite loops if something is wrong
+      if (path !== '/' && path !== '/index.html') {
+        window.location.replace('/#' + path + search);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
