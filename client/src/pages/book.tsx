@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
@@ -6,6 +6,31 @@ import bookingImage from "@assets/Booking-page-last_1764446873576.png";
 
 export default function Book() {
   const { t } = useLanguage();
+  const widgetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if script is already there to prevent duplicates
+    if (document.querySelector('script[src="https://square.site/appointments/buyer/widget/qdhoqrnshqclrg/LDS7Z0YYKSKAZ.js"]')) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://square.site/appointments/buyer/widget/qdhoqrnshqclrg/LDS7Z0YYKSKAZ.js";
+    script.async = true;
+    
+    if (widgetRef.current) {
+      widgetRef.current.appendChild(script);
+    }
+
+    return () => {
+      // Cleanup: remove the script and potentially the iframe if the script added one globally
+      // Note: Square widget might inject elements outside our ref. 
+      // We try to remove the script we added.
+      if (widgetRef.current && widgetRef.current.contains(script)) {
+        widgetRef.current.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <section className="pt-32 pb-24 min-h-screen flex items-start justify-center relative overflow-hidden">
@@ -21,13 +46,14 @@ export default function Book() {
           alt="Booking Background"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
       </div>
 
       <div className="container mx-auto px-6 text-center max-w-4xl relative z-10 mt-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-light mb-12 tracking-widest text-black whitespace-normal md:whitespace-nowrap"
+          className="text-3xl md:text-5xl lg:text-6xl font-light mb-8 tracking-widest text-black whitespace-normal md:whitespace-nowrap"
         >
           {t.bookTitle}
         </motion.h2>
@@ -46,19 +72,15 @@ export default function Book() {
           </a>
         </motion.div>
 
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={() =>
-            window.open(
-              "https://square.site/book/LDS7Z0YYKSKAZ/qdhoqrnshqclrg",
-              "_blank",
-            )
-          }
-          className="bg-transparent border border-black text-black hover:bg-black hover:text-white transition-all duration-300 px-10 py-5 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.4 }}
+           className="bg-white p-4 rounded-lg shadow-xl min-h-[600px]"
         >
-          {t.bookButtonMain}
-        </motion.button>
+           {/* Container for Square Widget */}
+           <div ref={widgetRef} className="w-full"></div>
+        </motion.div>
       </div>
     </section>
   );
