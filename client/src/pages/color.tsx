@@ -3,14 +3,12 @@ import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import colorImage from "@assets/Color-sharper_1764508389206.png";
 import { useLocation } from "wouter";
-import { useSquareAppointmentWidget } from "@/hooks/use-square-widget";
 
 export default function Color() {
   const { t } = useLanguage();
   // Cast t to any to access new properties
   const translations = t as any;
   const [_, setLocation] = useLocation();
-  useSquareAppointmentWidget();
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">

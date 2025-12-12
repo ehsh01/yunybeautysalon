@@ -3,11 +3,9 @@ import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import bookingImage from "@assets/Booking-page-last_1764446873576.png";
-import { useSquareAppointmentWidget } from "@/hooks/use-square-widget";
 
 export default function Book() {
   const { t } = useLanguage();
-  useSquareAppointmentWidget();
 
   return (
     <section className="pt-32 pb-24 min-h-screen flex items-start justify-center relative overflow-hidden">
@@ -50,7 +48,7 @@ export default function Book() {
           whileTap={{ scale: 0.98 }}
           onClick={() =>
             window.open(
-              "https://squareup.com/appointments/book/YOUR_SQUARE_LINK",
+              "https://square.site/book/LDS7Z0YYKSKAZ/qdhoqrnshqclrg",
               "_blank",
             )
           }

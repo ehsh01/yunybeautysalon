@@ -3,14 +3,12 @@ import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import treatmentsImage from "@assets/Treatments_1764509494529.png";
 import { useLocation } from "wouter";
-import { useSquareAppointmentWidget } from "@/hooks/use-square-widget";
 
 export default function Treatments() {
   const { t } = useLanguage();
   // Cast t to any to access new properties
   const translations = t as any;
   const [_, setLocation] = useLocation();
-  useSquareAppointmentWidget();
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">
