@@ -87,7 +87,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               }`}
             >
               <Globe className="w-3 h-3" />
-              <span>{language === "en" ? "ES" : "EN"}</span>
+              <span>{language === "en" ? "Español" : "English"}</span>
             </button>
           </div>
 
@@ -97,7 +97,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               onClick={toggleLang}
               className={`text-sm font-bold uppercase ${textColorClass}`}
             >
-              {language === "en" ? "ES" : "EN"}
+              {language === "en" ? "Español" : "English"}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
