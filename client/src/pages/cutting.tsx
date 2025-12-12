@@ -87,7 +87,12 @@ export default function Cutting() {
           className="mt-8"
         >
           <button
-            onClick={() => setLocation("/book")}
+            onClick={() =>
+              window.open(
+                "https://square.site/book/LDS7Z0YYKSKAZ/qdhoqrnshqclrg",
+                "_blank",
+              )
+            }
             className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}
