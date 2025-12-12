@@ -38,9 +38,12 @@ export default function Book() {
           transition={{ delay: 0.2 }}
           className="mb-8"
         >
-          <p className="text-lg md:text-xl text-black font-medium tracking-wide">
+          <a 
+            href="tel:7864368830"
+            className="text-lg md:text-xl text-black font-medium tracking-wide hover:text-accent transition-colors"
+          >
             {(t as any).callAction || "Call 786-436-8830"}
-          </p>
+          </a>
         </motion.div>
 
         <motion.button
