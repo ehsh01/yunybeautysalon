@@ -45,7 +45,12 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          onClick={() => setLocation("/book")}
+          onClick={() =>
+            window.open(
+              "https://square.site/book/LDS7Z0YYKSKAZ/qdhoqrnshqclrg",
+              "_blank",
+            )
+          }
           className="bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold cursor-pointer"
         >
           {t.heroBookButton}
