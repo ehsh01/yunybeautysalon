@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
@@ -6,31 +6,6 @@ import bookingImage from "@assets/Booking-page-last_1764446873576.png";
 
 export default function Book() {
   const { t } = useLanguage();
-  const widgetRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Check if script is already there to prevent duplicates
-    if (document.querySelector('script[src="https://square.site/appointments/buyer/widget/qdhoqrnshqclrg/LDS7Z0YYKSKAZ.js"]')) {
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = "https://square.site/appointments/buyer/widget/qdhoqrnshqclrg/LDS7Z0YYKSKAZ.js";
-    script.async = true;
-    
-    if (widgetRef.current) {
-      widgetRef.current.appendChild(script);
-    }
-
-    return () => {
-      // Cleanup: remove the script and potentially the iframe if the script added one globally
-      // Note: Square widget might inject elements outside our ref. 
-      // We try to remove the script we added.
-      if (widgetRef.current && widgetRef.current.contains(script)) {
-        widgetRef.current.removeChild(script);
-      }
-    };
-  }, []);
 
   return (
     <section className="pt-32 pb-24 min-h-screen flex items-start justify-center relative overflow-hidden">
@@ -76,10 +51,15 @@ export default function Book() {
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
            transition={{ delay: 0.4 }}
-           className="bg-white p-4 rounded-lg shadow-xl min-h-[600px]"
+           className="bg-white p-4 rounded-lg shadow-xl min-h-[600px] flex justify-center"
         >
-           {/* Container for Square Widget */}
-           <div ref={widgetRef} className="w-full"></div>
+           {/* Direct Iframe Embed to prevent redirect breakouts */}
+           <iframe 
+             src="https://app.squareup.com/appointments/buyer/widget/qdhoqrnshqclrg/LDS7Z0YYKSKAZ"
+             style={{ width: '100%', height: '800px', border: 'none', minHeight: '500px' }}
+             allow="payment app.squareup.com"
+             title="Square Booking Widget"
+           />
         </motion.div>
       </div>
     </section>
