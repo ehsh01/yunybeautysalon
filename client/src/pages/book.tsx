@@ -58,6 +58,7 @@ export default function Book() {
              src="https://app.squareup.com/appointments/buyer/widget/qdhoqrnshqclrg/LDS7Z0YYKSKAZ"
              style={{ width: '100%', height: '800px', border: 'none', minHeight: '500px' }}
              allow="payment app.squareup.com"
+             sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"
              title="Square Booking Widget"
            />
         </motion.div>
