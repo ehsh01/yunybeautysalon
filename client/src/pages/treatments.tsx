@@ -61,9 +61,6 @@ export default function Treatments() {
             {translations.treatmentBrazilian}
           </p>
           <p className="text-lg font-light uppercase tracking-wider">
-            {translations.treatmentAmazon}
-          </p>
-          <p className="text-lg font-light uppercase tracking-wider">
             {translations.treatmentOlaplex}
           </p>
           <p className="text-lg font-light uppercase tracking-wider">
