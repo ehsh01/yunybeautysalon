@@ -194,7 +194,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div className="flex flex-col gap-2 text-sm font-medium text-primary">
-              <p>{t.footerAddress}</p>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=5048+Old+Jonesboro+Rd,+Bristol,+TN+37620" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                {t.footerAddress}
+              </a>
               <a href="tel:7864368830" className="hover:text-accent transition-colors">
                 {(t as any).footerPhone || "786-436-8830"}
               </a>
