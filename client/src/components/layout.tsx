@@ -195,7 +195,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <div className="flex flex-col gap-2 text-sm font-medium text-primary">
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=5048+Old+Jonesboro+Rd,+Bristol,+TN+37620" 
+                href="https://www.google.com/maps/search/?api=1&query=1042+Old+Jonesboro+Rd,+Bristol,+TN+37620" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-accent transition-colors"
