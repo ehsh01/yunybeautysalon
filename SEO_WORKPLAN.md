@@ -49,3 +49,37 @@ This plan outlines the steps to optimize the website for search engines while ma
     - The `sitemap.xml` only lists the root URL (`/`).
     - The Homepage content is enriched to include summaries of all key sections (About, Services, Location) so the main crawler entry point contains all relevant keywords and business information.
 
+### 8. Tracking & Verification
+
+#### Google Search Console (DNS Verification)
+Since the domain uses Cloudflare, DNS verification is the most reliable method and avoids adding clutter to the codebase.
+1.  Go to [Google Search Console](https://search.google.com/search-console).
+2.  Select **"Domain"** property type (not "URL prefix").
+3.  Enter the domain: `yunybeautysalon.com`.
+4.  Copy the TXT record provided (e.g., `google-site-verification=...`).
+5.  Log in to the Cloudflare Dashboard.
+6.  Go to **DNS** > **Records**.
+7.  Add a new record:
+    -   **Type**: TXT
+    -   **Name**: `@` (or `yunybeautysalon.com`)
+    -   **Content**: Paste the Google verification string.
+    -   **TTL**: Auto
+8.  Wait a few minutes and click **Verify** in Search Console.
+
+#### Google Analytics 4 (GA4)
+To enable tracking:
+1.  Create a property in [Google Analytics](https://analytics.google.com/).
+2.  Get the **Measurement ID** (starts with `G-`).
+3.  Open `client/index.html`.
+4.  Uncomment the GA4 script block in the `<head>`.
+5.  Replace `G-XXXXXXXXXX` with the actual Measurement ID in both places.
+6.  Commit and deploy.
+
+#### Cloudflare Web Analytics (Optional Alternative)
+If you prefer privacy-first analytics without cookie banners:
+1.  Go to Cloudflare Dashboard > **Web Analytics**.
+2.  Add the site.
+3.  Copy the JS snippet.
+4.  Paste it into `client/index.html` (before `</body>`).
+5.  Deploy.
+
