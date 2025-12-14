@@ -6,33 +6,33 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yunybeautysalon.com/#/about</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://yunybeautysalon.com/about</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://yunybeautysalon.com/#/services</loc>
+    <loc>https://yunybeautysalon.com/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://yunybeautysalon.com/#/services/cutting</loc>
+    <loc>https://yunybeautysalon.com/book</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yunybeautysalon.com/#/services/color</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yunybeautysalon.com/#/services/treatments</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yunybeautysalon.com/#/book</loc>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://yunybeautysalon.com/cutting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yunybeautysalon.com/color</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://yunybeautysalon.com/treatments</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
