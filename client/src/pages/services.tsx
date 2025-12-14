@@ -6,20 +6,24 @@ import { SEO } from "@/components/seo";
 import servicesImage from "@assets/Services-latest_1764510045140.webp";
 
 export default function Services() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   // Cast t to any to access the new properties until TypeScript picks them up or if they are dynamic
   const translations = t as any;
 
+  const getPath = (path: string) => {
+    return language === 'es' ? `/es${path}` : path;
+  };
+
   const services = [
     {
       name: translations.serviceCutting || "Cutting",
-      href: "/services/cutting",
+      href: getPath("/services/cutting"),
     },
-    { name: translations.serviceColor || "Color", href: "/services/color" },
+    { name: translations.serviceColor || "Color", href: getPath("/services/color") },
     {
       name: translations.serviceTreatments || "Treatments",
-      href: "/services/treatments",
+      href: getPath("/services/treatments"),
     },
   ];
 

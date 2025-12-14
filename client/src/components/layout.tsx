@@ -11,6 +11,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Helper to generate language-aware paths
+  const getPath = (path: string) => {
+    if (language === 'es') {
+      return `/es${path === '/' ? '' : path}`;
+    }
+    return path;
+  };
+
   // Handle scroll for navbar styling
   useEffect(() => {
     const handleScroll = () => {
@@ -30,14 +38,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   };
 
   const navItems = [
-    { href: "/", label: t.navHome },
-    { href: "/about", label: t.navAbout },
-    { href: "/book", label: t.navBook },
-    { href: "/services", label: t.navServices },
+    { href: getPath("/"), label: t.navHome },
+    { href: getPath("/about"), label: t.navAbout },
+    { href: getPath("/book"), label: t.navBook },
+    { href: getPath("/services"), label: t.navServices },
   ];
 
   // Determine if we are on a page that needs transparent/white header
-  const isTransparentPage = location === "/";
+  // Check for both English and Spanish root paths
+  const isTransparentPage = location === "/" || location === "/es" || location === "/es/";
 
   const headerBgClass = "absolute bg-transparent py-6";
 

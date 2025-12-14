@@ -6,8 +6,12 @@ import bookingImage from "@assets/Booking-page-last_1764446873576.png";
 import { Link } from "wouter";
 
 export default function Book() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const translations = t as any;
+
+  const getPath = (path: string) => {
+    return language === 'es' ? `/es${path}` : path;
+  };
 
   return (
     <section className="pt-32 pb-24 min-h-screen flex flex-col items-center relative overflow-hidden">
@@ -47,11 +51,11 @@ export default function Book() {
           
           <div className="flex flex-wrap justify-center gap-4 text-sm uppercase tracking-widest mb-8">
              <span className="text-black/60">{translations.bookServicesTitle}:</span>
-             <Link href="/services/cutting" className="text-black border-b border-black/30 hover:border-black transition-colors">{translations.bookServiceCut}</Link>
+             <Link href={getPath("/services/cutting")} className="text-black border-b border-black/30 hover:border-black transition-colors">{translations.bookServiceCut}</Link>
              <span className="text-black/30">|</span>
-             <Link href="/services/color" className="text-black border-b border-black/30 hover:border-black transition-colors">{translations.bookServiceColor}</Link>
+             <Link href={getPath("/services/color")} className="text-black border-b border-black/30 hover:border-black transition-colors">{translations.bookServiceColor}</Link>
              <span className="text-black/30">|</span>
-             <Link href="/services/treatments" className="text-black border-b border-black/30 hover:border-black transition-colors">{translations.bookServiceTreatments}</Link>
+             <Link href={getPath("/services/treatments")} className="text-black border-b border-black/30 hover:border-black transition-colors">{translations.bookServiceTreatments}</Link>
           </div>
         </motion.div>
 

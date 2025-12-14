@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 import { translations, Language } from './translations';
+import { useLocation } from "wouter";
 
 type LanguageContextType = {
   language: Language;
@@ -10,7 +11,35 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [location, setLocation] = useLocation();
+  
+  // Derive language from URL
+  // If path starts with /es, it's Spanish. Otherwise English.
+  const isSpanish = location.startsWith('/es');
+  const language: Language = isSpanish ? 'es' : 'en';
+
+  const setLanguage = (lang: Language) => {
+    if (lang === language) return;
+
+    let newPath = location;
+    if (lang === 'es') {
+      // Switch to Spanish
+      // e.g. /about -> /es/about
+      // e.g. / -> /es
+      if (location === '/') {
+        newPath = '/es';
+      } else {
+        newPath = `/es${location}`;
+      }
+    } else {
+      // Switch to English
+      // e.g. /es/about -> /about
+      // e.g. /es -> /
+      newPath = location.replace(/^\/es/, '');
+      if (newPath === '') newPath = '/';
+    }
+    setLocation(newPath);
+  };
 
   const value = {
     language,

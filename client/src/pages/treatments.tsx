@@ -5,10 +5,14 @@ import treatmentsImage from "@assets/Treatments_1764509494529.webp";
 import { useLocation } from "wouter";
 
 export default function Treatments() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Cast t to any to access new properties
   const translations = t as any;
   const [_, setLocation] = useLocation();
+
+  const getPath = (path: string) => {
+    return language === 'es' ? `/es${path}` : path;
+  };
 
   return (
     <section className="pt-32 pb-24 min-h-screen relative overflow-hidden flex flex-col items-center">
@@ -94,7 +98,7 @@ export default function Treatments() {
           className="mt-16"
         >
           <button
-            onClick={() => setLocation("/book")}
+            onClick={() => setLocation(getPath("/book"))}
             className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold shadow-none hover:shadow-lg"
           >
             {t.bookButtonMain}

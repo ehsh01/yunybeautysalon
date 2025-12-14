@@ -6,9 +6,13 @@ import heroImage from "@assets/Yuny-Main_1764502456223.webp";
 import { useLocation, Link } from "wouter";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [_, setLocation] = useLocation();
   const translations = t as any;
+
+  const getPath = (path: string) => {
+    return language === 'es' ? `/es${path}` : path;
+  };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -99,7 +103,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            onClick={() => setLocation("/book")}
+            onClick={() => setLocation(getPath("/book"))}
             className="bg-transparent border border-white text-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 text-sm uppercase tracking-widest font-semibold cursor-pointer"
           >
             {t.heroBookButton}
@@ -162,7 +166,7 @@ export default function Home() {
       {/* About Summary Section */}
       <section className="py-24 bg-white text-black">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <Link href="/about" className="cursor-pointer group inline-block">
+          <Link href={language === 'es' ? '/es/about' : '/about'} className="cursor-pointer group inline-block">
             <h2 className="text-3xl md:text-4xl font-light tracking-widest mb-8 uppercase group-hover:opacity-70 transition-opacity border-b-2 border-transparent group-hover:border-black pb-1">
               {t.aboutTitle}
             </h2>
@@ -187,7 +191,7 @@ export default function Home() {
             
             {/* Cutting */}
             <div className="flex flex-col items-center group">
-              <Link href="/services/cutting" aria-label="View Cutting Services">
+              <Link href={getPath("/services/cutting")} aria-label="View Cutting Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
                   {/* Ideally we would put an image here, but for now just a placeholder or color block if no specific image available for thumbnail */}
@@ -199,7 +203,7 @@ export default function Home() {
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
                 {translations.serviceCutting}
               </h3>
-              <Link href="/services/cutting" aria-label="View details about Cutting Services">
+              <Link href={getPath("/services/cutting")} aria-label="View details about Cutting Services">
                 <span className="text-xs tracking-widest border-b border-transparent group-hover:border-black transition-all cursor-pointer">
                   VIEW DETAILS
                 </span>
@@ -208,7 +212,7 @@ export default function Home() {
 
             {/* Color */}
             <div className="flex flex-col items-center group">
-              <Link href="/services/color" aria-label="View Color Services">
+              <Link href={getPath("/services/color")} aria-label="View Color Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
                   <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Color Service Thumbnail">
@@ -219,7 +223,7 @@ export default function Home() {
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
                 {translations.serviceColor}
               </h3>
-              <Link href="/services/color" aria-label="View details about Color Services">
+              <Link href={getPath("/services/color")} aria-label="View details about Color Services">
                 <span className="text-xs tracking-widest border-b border-transparent group-hover:border-black transition-all cursor-pointer">
                   VIEW DETAILS
                 </span>
@@ -228,7 +232,7 @@ export default function Home() {
 
             {/* Treatments */}
             <div className="flex flex-col items-center group">
-              <Link href="/services/treatments" aria-label="View Treatment Services">
+              <Link href={getPath("/services/treatments")} aria-label="View Treatment Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
                   <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Treatments Service Thumbnail">
@@ -239,7 +243,7 @@ export default function Home() {
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
                 {translations.serviceTreatments}
               </h3>
-              <Link href="/services/treatments" aria-label="View details about Treatment Services">
+              <Link href={getPath("/services/treatments")} aria-label="View details about Treatment Services">
                 <span className="text-xs tracking-widest border-b border-transparent group-hover:border-black transition-all cursor-pointer">
                   VIEW DETAILS
                 </span>
@@ -327,7 +331,7 @@ export default function Home() {
           
           <div className="mt-20">
              <button
-              onClick={() => setLocation("/book")}
+              onClick={() => setLocation(getPath("/book"))}
               className="bg-white text-black px-10 py-4 text-sm uppercase tracking-widest font-semibold hover:bg-neutral-200 transition-colors"
             >
               {t.heroBookButton}

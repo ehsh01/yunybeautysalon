@@ -21,6 +21,7 @@ function AppRoutes() {
   return (
     <Layout>
       <Switch>
+        {/* English Routes */}
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
@@ -28,6 +29,16 @@ function AppRoutes() {
         <Route path="/services/color" component={Color} />
         <Route path="/services/treatments" component={Treatments} />
         <Route path="/book" component={Book} />
+
+        {/* Spanish Routes */}
+        <Route path="/es" component={Home} />
+        <Route path="/es/about" component={About} />
+        <Route path="/es/services" component={Services} />
+        <Route path="/es/services/cutting" component={Cutting} />
+        <Route path="/es/services/color" component={Color} />
+        <Route path="/es/services/treatments" component={Treatments} />
+        <Route path="/es/book" component={Book} />
+
         <Route component={NotFound} />
       </Switch>
     </Layout>
@@ -39,11 +50,11 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <LanguageProvider>
-          <WouterRouter hook={useHashLocation}>
+        <WouterRouter hook={useHashLocation}>
+          <LanguageProvider>
             <AppRoutes />
-          </WouterRouter>
-        </LanguageProvider>
+          </LanguageProvider>
+        </WouterRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
