@@ -26,7 +26,7 @@ export default function Treatments() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 w-full text-left">
+      <div className="container mx-auto px-6 relative z-10 w-full text-left bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-lg max-w-5xl mt-8">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,6 +59,7 @@ export default function Treatments() {
           transition={{ delay: 0.4 }}
           className="text-primary space-y-4 mb-12"
         >
+          <h2 className="sr-only">Available Treatments</h2>
           <p className="text-lg font-light uppercase tracking-wider">
             {translations.treatmentFusio}
           </p>

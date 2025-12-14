@@ -63,10 +63,10 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
-            alt="Salon Hero"
+            alt="Salon Hero - Interior view of YUNY Beauty Salon"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto mt-20">
@@ -186,11 +186,11 @@ export default function Home() {
             
             {/* Cutting */}
             <div className="flex flex-col items-center group">
-              <Link href="/services/cutting">
+              <Link href="/services/cutting" aria-label="View Cutting Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
                   {/* Ideally we would put an image here, but for now just a placeholder or color block if no specific image available for thumbnail */}
-                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light">
+                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Cutting Service Thumbnail">
                     CUTTING
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export default function Home() {
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
                 {translations.serviceCutting}
               </h3>
-              <Link href="/services/cutting">
+              <Link href="/services/cutting" aria-label="View details about Cutting Services">
                 <span className="text-xs tracking-widest border-b border-transparent group-hover:border-black transition-all cursor-pointer">
                   VIEW DETAILS
                 </span>
@@ -207,10 +207,10 @@ export default function Home() {
 
             {/* Color */}
             <div className="flex flex-col items-center group">
-              <Link href="/services/color">
+              <Link href="/services/color" aria-label="View Color Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
-                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light">
+                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Color Service Thumbnail">
                     COLOR
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export default function Home() {
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
                 {translations.serviceColor}
               </h3>
-              <Link href="/services/color">
+              <Link href="/services/color" aria-label="View details about Color Services">
                 <span className="text-xs tracking-widest border-b border-transparent group-hover:border-black transition-all cursor-pointer">
                   VIEW DETAILS
                 </span>
@@ -227,10 +227,10 @@ export default function Home() {
 
             {/* Treatments */}
             <div className="flex flex-col items-center group">
-              <Link href="/services/treatments">
+              <Link href="/services/treatments" aria-label="View Treatment Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
-                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light">
+                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Treatments Service Thumbnail">
                     TREATMENTS
                   </div>
                 </div>
@@ -238,7 +238,7 @@ export default function Home() {
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
                 {translations.serviceTreatments}
               </h3>
-              <Link href="/services/treatments">
+              <Link href="/services/treatments" aria-label="View details about Treatment Services">
                 <span className="text-xs tracking-widest border-b border-transparent group-hover:border-black transition-all cursor-pointer">
                   VIEW DETAILS
                 </span>

@@ -26,7 +26,7 @@ export default function Cutting() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 text-left w-full">
+      <div className="container mx-auto px-6 relative z-10 text-left w-full bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-lg max-w-5xl mt-8">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,18 +72,18 @@ export default function Cutting() {
               translations.cutLayered || "Layered Cut",
               translations.cutBlowDry || "Blow-Dry",
             ].map((item, index) => (
-              <p
+              <h3
                 key={index}
                 className="text-lg md:text-xl text-primary font-medium tracking-wide"
               >
                 {item}
-              </p>
+              </h3>
             ))}
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-light tracking-widest text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl font-light tracking-widest text-primary mb-4">
             {translations.cuttingExtras || "Extras"}
-          </h3>
+          </h2>
           <p className="text-lg md:text-xl text-primary font-medium tracking-wide">
             {translations.cutFlatIron || "Flat Iron | Curls"}
           </p>

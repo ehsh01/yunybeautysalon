@@ -80,6 +80,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <button
               onClick={toggleLang}
+              aria-label={language === "en" ? "Switch to Spanish" : "Switch to English"}
               className={`flex items-center gap-1 text-sm font-medium uppercase border px-3 py-1 rounded-full transition-colors ${
                 isTransparentPage
                   ? "text-white border-white/50 hover:bg-white/10"
@@ -95,12 +96,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="md:hidden flex items-center gap-4">
             <button
               onClick={toggleLang}
+              aria-label={language === "en" ? "Switch to Spanish" : "Switch to English"}
               className={`text-sm font-bold uppercase ${textColorClass}`}
             >
               {language === "en" ? "Español" : "English"}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               className={textColorClass}
             >
               {mobileMenuOpen ? <X /> : <Menu />}

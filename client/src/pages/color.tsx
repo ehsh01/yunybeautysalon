@@ -26,7 +26,7 @@ export default function Color() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 w-full text-left">
+      <div className="container mx-auto px-6 relative z-10 w-full text-left bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-lg max-w-5xl mt-8">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,6 +57,7 @@ export default function Color() {
           transition={{ delay: 0.4 }}
           className="text-primary space-y-2 mb-12"
         >
+          <h2 className="sr-only">Color Services List</h2>
           <p className="text-lg font-light uppercase tracking-wider">
             {translations.colorBase}
           </p>
@@ -97,9 +98,9 @@ export default function Color() {
 
           <div className="h-px bg-primary/30 w-full max-w-md my-8"></div>
 
-          <p className="text-xl font-medium uppercase tracking-widest">
+          <h3 className="text-xl font-medium uppercase tracking-widest">
             {translations.colorCorrection}
-          </p>
+          </h3>
           <p className="text-lg font-light uppercase tracking-wider">
             {translations.colorConsultation}
           </p>

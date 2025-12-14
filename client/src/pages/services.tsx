@@ -61,9 +61,9 @@ export default function Services() {
               className="relative group"
             >
               <Link href={service.href}>
-                <span className="text-2xl md:text-4xl font-light uppercase tracking-[0.2em] text-white cursor-pointer pb-3 block border-b border-white/40 hover:border-white transition-all duration-300 drop-shadow-md">
+                <h2 className="text-2xl md:text-4xl font-light uppercase tracking-[0.2em] text-white cursor-pointer pb-3 block border-b border-white/40 hover:border-white transition-all duration-300 drop-shadow-md">
                   {service.name}
-                </span>
+                </h2>
               </Link>
             </motion.div>
           ))}
