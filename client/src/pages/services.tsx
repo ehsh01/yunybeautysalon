@@ -41,10 +41,13 @@ export default function Services() {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Title Section - Centered */}
-        <div className="mb-12 text-center w-full mt-12">
-          <h2 className="text-5xl md:text-7xl font-light tracking-widest text-white mb-4">
-            {t.servicesTitle}
-          </h2>
+        <div className="mb-12 text-center w-full mt-12 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-light tracking-widest text-white mb-8">
+            {translations.servicesH1 || t.servicesTitle}
+          </h1>
+          <p className="text-lg md:text-xl font-light tracking-wide text-white/90">
+             {translations.servicesIntro}
+          </p>
         </div>
 
         {/* Services List - Centered and underlined, moved further down */}

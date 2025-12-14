@@ -30,11 +30,19 @@ export default function Treatments() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-8"
+          className="text-4xl md:text-6xl font-light tracking-widest text-primary mb-4"
         >
-          {/* Replaced "Hair Treatments" with "Treatments" and removed text below as requested */}
-          {translations.serviceTreatments || "Treatments"}
+          {translations.treatmentsH1 || translations.serviceTreatments}
         </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="text-lg md:text-xl font-light text-primary/80 mb-8 max-w-3xl leading-relaxed"
+        >
+          {translations.treatmentsDesc}
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

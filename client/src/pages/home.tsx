@@ -76,7 +76,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-5xl md:text-7xl lg:text-8xl font-light tracking-[0.15em] mb-4"
           >
-            {t.heroTitle}
+            {translations.heroH1 || t.heroTitle}
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
@@ -85,6 +85,14 @@ export default function Home() {
             className="text-lg md:text-xl font-light tracking-[0.3em] mb-12 uppercase"
           >
             {t.heroSubtitle}
+          </motion.p>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="text-base md:text-lg font-light tracking-wide mb-8 max-w-2xl mx-auto opacity-90 hidden md:block"
+          >
+            {translations.homeIntro}
           </motion.p>
           <motion.button
             initial={{ opacity: 0, y: 30 }}
@@ -237,6 +245,37 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-neutral-100 text-black">
+        <div className="container mx-auto px-6 max-w-4xl">
+           <h2 className="text-3xl md:text-4xl font-light tracking-widest mb-12 text-center uppercase">
+            {translations.faqTitle || "Frequently Asked Questions"}
+           </h2>
+           <div className="space-y-6">
+             <div className="bg-white p-6 shadow-sm">
+               <h3 className="text-lg font-medium mb-2">{translations.faqQ1 || "How do I book?"}</h3>
+               <p className="font-light opacity-80">{translations.faqA1}</p>
+             </div>
+             <div className="bg-white p-6 shadow-sm">
+               <h3 className="text-lg font-medium mb-2">{translations.faqQ2 || "Where are you located?"}</h3>
+               <p className="font-light opacity-80">{translations.faqA2}</p>
+             </div>
+             <div className="bg-white p-6 shadow-sm">
+               <h3 className="text-lg font-medium mb-2">{translations.faqQ3 || "Opening Hours?"}</h3>
+               <p className="font-light opacity-80">{translations.faqA3}</p>
+             </div>
+             <div className="bg-white p-6 shadow-sm">
+               <h3 className="text-lg font-medium mb-2">{translations.faqQ4 || "Walk-ins?"}</h3>
+               <p className="font-light opacity-80">{translations.faqA4}</p>
+             </div>
+             <div className="bg-white p-6 shadow-sm">
+               <h3 className="text-lg font-medium mb-2">{translations.faqQ5 || "Pricing?"}</h3>
+               <p className="font-light opacity-80">{translations.faqA5}</p>
+             </div>
+           </div>
         </div>
       </section>
 
