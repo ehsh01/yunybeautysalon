@@ -43,4 +43,7 @@ This plan outlines the steps to optimize the website for search engines while ma
 ### 7. Routing & Canonical URLs
 - [ ] Ensure Canonical URLs are self-referencing and correct.
 - [ ] Verify 404 page works correctly (GitHub Pages `404.html` trick).
+- [ ] **Hash Routing Note**: We are using hash routing (`/#/about`) which is generally not indexed as separate pages by search engines. To mitigate this, we treat the application as a single-page experience for SEO purposes:
+    - The `sitemap.xml` only lists the root URL (`/`).
+    - The Homepage content is enriched to include summaries of all key sections (About, Services, Location) so the main crawler entry point contains all relevant keywords and business information.
 
