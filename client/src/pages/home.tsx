@@ -1,6 +1,7 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
+import { Helmet } from "react-helmet-async";
 import heroImage from "@assets/Yuny-Main_1764502456223.png";
 import { useLocation, Link } from "wouter";
 
@@ -9,6 +10,41 @@ export default function Home() {
   const [_, setLocation] = useLocation();
   const translations = t as any;
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "YUNY Beauty Salon",
+    "image": "https://yunybeautysalon.com/attached_assets/Yuny-Main_1764502456223.png",
+    "url": "https://yunybeautysalon.com",
+    "telephone": "+1-786-436-8830",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1042 Old Jonesboro Rd",
+      "addressLocality": "Bristol",
+      "addressRegion": "TN",
+      "postalCode": "37620",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 36.5663,
+      "longitude": -82.1966
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/yuny_beauty",
+      "https://www.facebook.com/profile.php?id=61585203983413&mibextid=wwXIfr&rdid=jpJQnWpNRNYbd9Bx&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CD3oHk1nu%2F%3Fmibextid%3DwwXIfr#"
+    ],
+    "priceRange": "$$"
+  };
+
   return (
     <div className="flex flex-col w-full">
       <SEO 
@@ -16,6 +52,11 @@ export default function Home() {
         description="Professional hair salon in Bristol, TN offering cutting, coloring, balayage, and luxury hair treatments. Book your appointment today."
         image={heroImage}
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+      </Helmet>
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">

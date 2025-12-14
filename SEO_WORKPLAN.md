@@ -21,7 +21,9 @@ This plan outlines the steps to optimize the website for search engines while ma
 - [ ] Verify keyword targeting for "Beauty Salon Bristol TN", "Hair Color Bristol", etc.
 
 ### 3. Schema Markup (Structured Data)
-- [ ] Add `LocalBusiness` or `BeautySalon` JSON-LD schema to the Home page.
+- [x] Add `LocalBusiness` or `BeautySalon` JSON-LD schema to the Home page.
+    - Fields: `@type: HairSalon`, `name`, `url`, `telephone`, `address`, `geo`, `openingHours`, `sameAs`, `priceRange`.
+    - Implementation: Injected via `<Helmet>` in `client/src/pages/home.tsx`.
 - [ ] Add `BreadcrumbList` schema to inner pages.
 - [ ] Add `Service` schema to Service detail pages.
 
