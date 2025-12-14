@@ -175,9 +175,13 @@ export default function Home() {
       {/* Services Summary Section */}
       <section className="py-24 bg-neutral-50 text-black">
         <div className="container mx-auto px-6 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-light tracking-widest mb-16 text-center uppercase">
-            {t.servicesTitle}
-          </h2>
+          <div className="text-center mb-16">
+            <Link href="/services" className="cursor-pointer group inline-block">
+              <h2 className="text-3xl md:text-4xl font-light tracking-widest uppercase group-hover:opacity-70 transition-opacity border-b-2 border-transparent group-hover:border-black pb-1">
+                {t.servicesTitle}
+              </h2>
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             
             {/* Cutting */}
