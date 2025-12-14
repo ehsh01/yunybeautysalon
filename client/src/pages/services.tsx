@@ -3,7 +3,7 @@ import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SEO } from "@/components/seo";
-import servicesImage from "@assets/Services-latest_1764510045140.png";
+import servicesImage from "@assets/Services-latest_1764510045140.webp";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -36,6 +36,7 @@ export default function Services() {
           src={servicesImage}
           alt="Services Background"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
       </div>
 

@@ -1,7 +1,7 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
-import cuttingImage from "@assets/Cutting_1764503911117.png";
+import cuttingImage from "@assets/Cutting_1764503911117.webp";
 import { useLocation } from "wouter";
 
 export default function Cutting() {
@@ -23,6 +23,7 @@ export default function Cutting() {
           src={cuttingImage}
           alt="Cutting Services Background"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
       </div>
 

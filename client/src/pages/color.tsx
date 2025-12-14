@@ -1,7 +1,7 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
-import colorImage from "@assets/Color-sharper_1764508389206.png";
+import colorImage from "@assets/Color-sharper_1764508389206.webp";
 import { useLocation } from "wouter";
 
 export default function Color() {
@@ -23,6 +23,7 @@ export default function Color() {
           src={colorImage}
           alt="Color Services Background"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
       </div>
 

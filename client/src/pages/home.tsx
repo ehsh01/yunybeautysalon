@@ -2,7 +2,7 @@ import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import { Helmet } from "react-helmet-async";
-import heroImage from "@assets/Yuny-Main_1764502456223.png";
+import heroImage from "@assets/Yuny-Main_1764502456223.webp";
 import { useLocation, Link } from "wouter";
 
 export default function Home() {
@@ -65,6 +65,7 @@ export default function Home() {
             src={heroImage}
             alt="Salon Hero - Interior view of YUNY Beauty Salon"
             className="w-full h-full object-cover"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
