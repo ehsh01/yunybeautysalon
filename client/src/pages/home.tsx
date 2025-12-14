@@ -161,14 +161,14 @@ export default function Home() {
       {/* About Summary Section */}
       <section className="py-24 bg-white text-black">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <Link href="/about" className="cursor-pointer group">
-            <h2 className="text-3xl md:text-4xl font-light tracking-widest mb-8 uppercase group-hover:opacity-70 transition-opacity">
+          <Link href="/about" className="cursor-pointer group inline-block">
+            <h2 className="text-3xl md:text-4xl font-light tracking-widest mb-8 uppercase group-hover:opacity-70 transition-opacity border-b-2 border-transparent group-hover:border-black pb-1">
               {t.aboutTitle}
             </h2>
-            <p className="text-lg md:text-xl font-light leading-relaxed mb-12 opacity-80 group-hover:opacity-100 transition-opacity">
-              {t.aboutText}
-            </p>
           </Link>
+          <p className="text-lg md:text-xl font-light leading-relaxed mb-12 opacity-80">
+            {t.aboutText}
+          </p>
         </div>
       </section>
 
