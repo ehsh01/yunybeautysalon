@@ -167,11 +167,6 @@ export default function Home() {
           <p className="text-lg md:text-xl font-light leading-relaxed mb-12 opacity-80">
             {t.aboutText}
           </p>
-          <Link href="/about">
-            <span className="inline-block border-b border-black pb-1 text-sm uppercase tracking-widest cursor-pointer hover:opacity-50 transition-opacity">
-              {translations.navAbout}
-            </span>
-          </Link>
         </div>
       </section>
 
