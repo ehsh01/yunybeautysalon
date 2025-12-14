@@ -1,7 +1,7 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
-import treatmentsImage from "@assets/Treatments_1764509494529.webp";
+import treatmentsImage from "@assets/hair-treatment-services.webp";
 import { useLocation } from "wouter";
 
 export default function Treatments() {

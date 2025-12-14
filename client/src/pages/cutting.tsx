@@ -1,7 +1,7 @@
 import { useLanguage } from "@/lib/language-context";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
-import cuttingImage from "@assets/Cutting_1764503911117.webp";
+import cuttingImage from "@assets/hair-cutting-services.webp";
 import { useLocation } from "wouter";
 
 export default function Cutting() {
