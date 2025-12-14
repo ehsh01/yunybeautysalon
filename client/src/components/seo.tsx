@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLocation } from "wouter";
 
 interface SEOProps {
@@ -10,39 +10,27 @@ interface SEOProps {
 
 export function SEO({ title, description, image, type = "website" }: SEOProps) {
   const [location] = useLocation();
-  
-  useEffect(() => {
-    // Update title
-    document.title = title;
-    
-    // Helper to update meta tags
-    const updateMeta = (name: string, content: string, isProperty: boolean = false) => {
-      let element = document.querySelector(isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`);
-      if (!element) {
-        element = document.createElement('meta');
-        element.setAttribute(isProperty ? 'property' : 'name', name);
-        document.head.appendChild(element);
-      }
-      element.setAttribute('content', content);
-    };
+  const canonicalUrl = `https://yunybeautysalon.com${location}`;
 
-    if (description) {
-      updateMeta('description', description);
-      updateMeta('og:description', description, true);
-      updateMeta('twitter:description', description);
-    }
+  return (
+    <Helmet>
+      {/* Basic */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="canonical" href={canonicalUrl} />
 
-    if (image) {
-      updateMeta('og:image', image, true);
-      updateMeta('twitter:image', image);
-    }
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={canonicalUrl} />
+      {image && <meta property="og:image" content={image} />}
 
-    updateMeta('og:title', title, true);
-    updateMeta('twitter:title', title);
-    updateMeta('og:type', type, true);
-    updateMeta('og:url', window.location.href, true);
-
-  }, [title, description, image, type, location]);
-
-  return null;
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
+    </Helmet>
+  );
 }
