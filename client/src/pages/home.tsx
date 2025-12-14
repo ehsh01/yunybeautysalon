@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { SEO } from "@/components/seo";
 import { Helmet } from "react-helmet-async";
 import heroImage from "@assets/Yuny-Main_1764502456223.webp";
+import cuttingImage from "@assets/hair-cutting-services.webp";
+import colorImage from "@assets/hair-coloring-services.webp";
+import treatmentsImage from "@assets/hair-treatment-services.webp";
 import { useLocation, Link } from "wouter";
 
 export default function Home() {
@@ -194,10 +197,11 @@ export default function Home() {
               <Link href={getPath("/services/cutting")} aria-label="View Cutting Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
-                  {/* Ideally we would put an image here, but for now just a placeholder or color block if no specific image available for thumbnail */}
-                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Cutting Service Thumbnail">
-                    CUTTING
-                  </div>
+                  <img
+                    src={cuttingImage}
+                    alt="Hair Cutting Services"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
               </Link>
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
@@ -215,9 +219,11 @@ export default function Home() {
               <Link href={getPath("/services/color")} aria-label="View Color Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
-                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Color Service Thumbnail">
-                    COLOR
-                  </div>
+                  <img
+                    src={colorImage}
+                    alt="Hair Coloring Services"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
               </Link>
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
@@ -235,9 +241,11 @@ export default function Home() {
               <Link href={getPath("/services/treatments")} aria-label="View Treatment Services">
                 <div className="w-full aspect-[3/4] bg-neutral-200 mb-6 overflow-hidden relative cursor-pointer">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
-                  <div className="w-full h-full bg-neutral-300 flex items-center justify-center text-neutral-400 font-light" role="img" aria-label="Treatments Service Thumbnail">
-                    TREATMENTS
-                  </div>
+                  <img
+                    src={treatmentsImage}
+                    alt="Hair Treatment Services"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
               </Link>
               <h3 className="text-xl font-medium tracking-widest uppercase mb-2">
