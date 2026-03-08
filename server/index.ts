@@ -1,4 +1,7 @@
 import express, { type Request, Response, NextFunction } from "express";
+import cors from "cors";
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
@@ -11,6 +14,27 @@ declare module "http" {
     rawBody: unknown;
   }
 }
+
+// Security: rate limiting - 1000 req/15min per IP (generous for brochure site)
+app.use(
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 1000,
+    standardHeaders: true,
+    legacyHeaders: false,
+  }),
+);
+
+// Security: HTTP headers (X-Content-Type-Options, X-Frame-Options, etc.)
+app.use(
+  helmet({
+    contentSecurityPolicy: false, // CSP added via index.html for static deployment
+    crossOriginEmbedderPolicy: false, // Allow Square iframe
+  }),
+);
+
+// Security: CORS - allow same-origin (default for same-domain API)
+app.use(cors({ origin: true, credentials: true }));
 
 app.use(
   express.json({
